@@ -1,5 +1,8 @@
 [
   "core-board/rk3399-pro-core-board/wiki-tutorial",
   "core-board/rk3568-industrial-core-board/wiki-tutorial",
-  "core-board/rk3588-core-board/wiki-tutorial"
+  "core-board/rk3588-core-board/wiki-tutorial",
+  "main-board/rk3568-main-board/wiki-tutorial",
+  "main-board/robo3588-robot-main-board/wiki-tutorial",
+  "terminal/bq8180-ai-mini-pc/wiki-tutorial"
 ]
