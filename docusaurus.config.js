@@ -127,7 +127,7 @@ const productNavGroups = [
 ];
 
 const productDocLinks = {
-  'RK3588 核心板': '/docs',
+  'RK3588 核心板': '/docs/core-board/rk3588-core-board',
   'RK3568 工业级核心板': '/docs/core-board/rk3568-industrial-core-board',
   'RK3399 Pro 核心板': '/docs/core-board/rk3399-pro-core-board',
   'TB-96AIoT-1808CO': '/docs/core-board/tb-96aiot-1808co',
@@ -174,7 +174,7 @@ const getProductNavbarItem = (label, section) =>
         label,
         to: withSidebarContext(productDocLinks[label], section),
         ...(label === 'RK3588 核心板'
-          ? {activeBaseRegex: '^/docs/?$'}
+          ? {activeBaseRegex: '^/docs/core-board/rk3588-core-board/?'}
           : {}),
       }
     : {
