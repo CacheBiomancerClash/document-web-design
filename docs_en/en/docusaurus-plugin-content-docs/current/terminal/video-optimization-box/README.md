@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: Video Optimization Box
 title: Video Optimization Box Product Specification
 ---
 

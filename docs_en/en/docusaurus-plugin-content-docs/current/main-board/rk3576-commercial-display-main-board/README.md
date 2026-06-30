@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: RK3576 Commercial Display Motherboard
 title: RK3576 Commercial Display Motherboard Product Specification
 ---
 

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: RK3588 主板
 title: RK3588 主板产品规格书
 ---
 

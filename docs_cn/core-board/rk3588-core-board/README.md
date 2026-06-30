@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 slug: /core-board/rk3588-core-board
-sidebar_label: 产品规格书
+sidebar_label: RK3588 核心板
 title: RK3588 核心板产品规格书
 ---
 

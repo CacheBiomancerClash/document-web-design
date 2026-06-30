@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: RK3568-15.6英寸屏
 title: RK3568-15.6英寸屏产品规格书
 ---
 

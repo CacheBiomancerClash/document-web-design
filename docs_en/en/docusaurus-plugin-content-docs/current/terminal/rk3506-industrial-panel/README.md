@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: RK3506 Industrial Panel
 title: RK3506 Industrial Panel Product Specification
 ---
 

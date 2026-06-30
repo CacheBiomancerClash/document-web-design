@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: RK3568 Data Acquisition Gateway
 title: RK3568 Data Acquisition Gateway Product Specification
 ---
 

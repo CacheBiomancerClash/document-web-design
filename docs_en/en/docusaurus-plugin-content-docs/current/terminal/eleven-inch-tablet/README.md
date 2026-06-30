@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: 11-inch Tablet
 title: 11-inch Tablet Product Specification
 ---
 

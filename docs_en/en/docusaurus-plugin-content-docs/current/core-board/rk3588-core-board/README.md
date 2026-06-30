@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 slug: /core-board/rk3588-core-board
-sidebar_label: Product Specification
+sidebar_label: RK3588 Core Board
 title: RK3588 Core Board Product Specification
 ---
 

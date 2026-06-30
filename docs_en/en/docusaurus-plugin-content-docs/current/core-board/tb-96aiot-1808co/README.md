@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: TB-96AIoT-1808CO
 title: TB-96AIoT-1808CO Product Specification
 ---
 

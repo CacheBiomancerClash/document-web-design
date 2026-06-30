@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: RK3568 Industrial Core Board
 title: RK3568 Industrial Core Board Product Specification
 ---
 

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: RK3399 Pro Core Board
 title: RK3399 Pro Core Board Product Specification
 ---
 

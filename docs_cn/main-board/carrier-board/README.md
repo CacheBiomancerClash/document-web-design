@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: Carrier Board
 title: Carrier Board 产品规格书
 ---
 

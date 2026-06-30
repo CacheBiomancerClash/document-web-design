@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: AI边缘工作站
 title: AI边缘工作站产品规格书
 ---
 

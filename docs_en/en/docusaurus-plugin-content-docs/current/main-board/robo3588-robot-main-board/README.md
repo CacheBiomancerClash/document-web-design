@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: Robo3588 Robot Motherboard
 title: Robo3588 Robot Motherboard Product Specification
 ---
 

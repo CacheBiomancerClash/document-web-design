@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: 视频优化盒子
 title: 视频优化盒子产品规格书
 ---
 

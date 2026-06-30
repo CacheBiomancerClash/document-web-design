@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: RK3576 Data Acquisition Gateway
 title: RK3576 Data Acquisition Gateway Product Specification
 ---
 

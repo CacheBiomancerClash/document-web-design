@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: 11英寸平板
 title: 11英寸平板产品规格书
 ---
 

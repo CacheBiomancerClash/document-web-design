@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: 10.6-inch Tablet
 title: 10.6-inch Tablet Product Specification
 ---
 

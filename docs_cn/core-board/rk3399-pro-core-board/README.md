@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: RK3399 Pro 核心板
 title: RK3399 Pro 核心板产品规格书
 ---
 

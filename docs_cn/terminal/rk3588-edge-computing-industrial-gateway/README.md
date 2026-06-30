@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: RK3588边缘计算工业网关
 title: RK3588边缘计算工业网关产品规格书
 ---
 

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: BQ8180 AI Mini PC
 title: BQ8180 AI Mini PC产品规格书
 ---
 

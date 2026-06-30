@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: RK3568 数据采集网关
 title: RK3568 数据采集网关产品规格书
 ---
 

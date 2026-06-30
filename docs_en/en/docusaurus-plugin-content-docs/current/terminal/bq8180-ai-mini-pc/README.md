@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: BQ8180 AI Mini PC
 title: BQ8180 AI Mini PC Product Specification
 ---
 

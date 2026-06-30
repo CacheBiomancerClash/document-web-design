@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: AI Edge Workstation
 title: AI Edge Workstation Product Specification
 ---
 

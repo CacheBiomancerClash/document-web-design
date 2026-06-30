@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: TB-96AIoT-1808CO
 title: TB-96AIoT-1808CO 产品规格书
 ---
 

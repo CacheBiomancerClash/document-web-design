@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: 8英寸平板
 title: 8英寸平板产品规格书
 ---
 

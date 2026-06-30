@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: 工控屏
 title: 工控屏产品规格书
 ---
 

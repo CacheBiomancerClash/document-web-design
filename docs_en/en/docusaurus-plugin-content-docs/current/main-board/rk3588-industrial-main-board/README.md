@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Product Specification
+sidebar_label: RK3588 Industrial Motherboard
 title: RK3588 Industrial Motherboard Product Specification
 ---
 

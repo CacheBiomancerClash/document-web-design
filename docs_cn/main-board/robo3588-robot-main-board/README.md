@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_label: Robo3588机器人主板
 title: Robo3588机器人主板产品规格书
 ---
 
