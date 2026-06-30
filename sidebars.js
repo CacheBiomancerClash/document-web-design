@@ -95,6 +95,7 @@ const sharedProducts = {
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   docsSidebar: [
+    { type: 'doc', id: 'README' },
     topCategory({
       label: '核心板',
       section: 'core-board',
