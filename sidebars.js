@@ -4,21 +4,30 @@ const fs = require('fs');
 const path = require('path');
 
 const {hasEnglishDoc, isEnglishBuild} = require('./scripts/english-docs');
+const splitDocSourceIds = new Set(require('./src/generated/splitDocSourceIds.json'));
 
 const docsDir = path.join(__dirname, 'docs_cn');
+
+function resolveSplitDocId(docId) {
+  return splitDocSourceIds.has(docId) ? `${docId}/README` : docId;
+}
 
 function shouldIncludeDoc(docId) {
   return !isEnglishBuild() || hasEnglishDoc(docId);
 }
 
 function hasSourceDoc(docId) {
+  const resolvedDocId = resolveSplitDocId(docId);
+
   return ['.md', '.mdx'].some((extension) =>
-    fs.existsSync(path.join(docsDir, `${docId}${extension}`)),
+    fs.existsSync(path.join(docsDir, `${resolvedDocId}${extension}`)),
   );
 }
 
 const localizedDoc = (label, id, suffix = '') =>
-  hasSourceDoc(id) && shouldIncludeDoc(id) ? { type: 'doc', label, id } : undefined;
+  hasSourceDoc(id) && shouldIncludeDoc(resolveSplitDocId(id))
+    ? { type: 'doc', label, id: resolveSplitDocId(id) }
+    : undefined;
 
 const existingDocsOnly = (items) => items.filter(Boolean);
 

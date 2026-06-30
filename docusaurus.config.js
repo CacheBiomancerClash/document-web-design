@@ -3,10 +3,15 @@
 const {hasEnglishDoc, isEnglishBuild} = require('./scripts/english-docs');
 const lightCodeTheme = require('prism-react-renderer').themes.github;
 const darkCodeTheme = require('prism-react-renderer').themes.dracula;
+const splitDocSourceIds = new Set(require('./src/generated/splitDocSourceIds.json'));
 
 function filterEnglishSidebarItems(items) {
   return items.flatMap((item) => {
     if (item.type === 'doc') {
+      if (splitDocSourceIds.has(item.id)) {
+        return [];
+      }
+
       return hasEnglishDoc(item.id) ? [item] : [];
     }
 
@@ -51,6 +56,10 @@ const topLevelReadmeDocIds = new Set([
 
 function removeTopLevelReadmeLinks(items) {
   return items.flatMap((item) => {
+    if (item.type === 'doc' && splitDocSourceIds.has(item.id)) {
+      return [];
+    }
+
     if (item.type === 'doc' && topLevelReadmeDocIds.has(item.id)) {
       return [];
     }
