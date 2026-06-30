@@ -44,6 +44,10 @@ const localizedProductSpecDoc = (label, id, suffix = '') =>
 const topCategory = ({ label, section, items }) => ({
   type: 'category',
   label,
+  link: {
+    type: 'doc',
+    id: `${section}/README`,
+  },
   className: `sidebar-section-top sidebar-section-${section}`,
   collapsed: true,
   items,
@@ -95,7 +99,7 @@ const sharedProducts = {
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   docsSidebar: [
-    { type: 'doc', id: 'README' },
+    { type: 'doc', id: 'README', className: 'sidebar-docs-index-hidden' },
     topCategory({
       label: '核心板',
       section: 'core-board',

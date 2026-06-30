@@ -5,44 +5,62 @@ title: Documentation
 slug: /
 ---
 
+import DocCardList from '@theme/DocCardList';
+
 # Documentation
 
 BearKey Docs collects documentation for core boards, motherboards, terminals, and solution stacks. Choose a category to continue.
 
-<div class="docs-index-grid">
-  <a class="docs-index-card" href="/en/docs/core-board">
-    <span class="docs-index-card__icon">💼</span>
-    <span class="docs-index-card__title">Core Board</span>
-    <span class="docs-index-card__meta">4 items</span>
-  </a>
-  <a class="docs-index-card" href="/en/docs/main-board">
-    <span class="docs-index-card__icon">💼</span>
-    <span class="docs-index-card__title">Motherboard</span>
-    <span class="docs-index-card__meta">9 items</span>
-  </a>
-  <a class="docs-index-card" href="/en/docs/terminal">
-    <span class="docs-index-card__icon">💼</span>
-    <span class="docs-index-card__title">Terminal</span>
-    <span class="docs-index-card__meta">15 items</span>
-  </a>
-  <a class="docs-index-card" href="/en/docs/aiot-solutions">
-    <span class="docs-index-card__icon">📄</span>
-    <span class="docs-index-card__title">AIOT Solutions</span>
-    <span class="docs-index-card__meta">Solutions and product collections</span>
-  </a>
-  <a class="docs-index-card" href="/en/docs/openharmony">
-    <span class="docs-index-card__icon">💼</span>
-    <span class="docs-index-card__title">OpenHarmony</span>
-    <span class="docs-index-card__meta">OpenHarmony documentation</span>
-  </a>
-  <a class="docs-index-card" href="/en/docs/mineharmony">
-    <span class="docs-index-card__icon">💼</span>
-    <span class="docs-index-card__title">MineHarmony</span>
-    <span class="docs-index-card__meta">MineHarmony documentation</span>
-  </a>
-  <a class="docs-index-card" href="/en/docs/reference">
-    <span class="docs-index-card__icon">📄</span>
-    <span class="docs-index-card__title">Other</span>
-    <span class="docs-index-card__meta">Reference documents</span>
-  </a>
-</div>
+<DocCardList
+  items={[
+    {
+      type: 'category',
+      label: 'Core Board',
+      href: '/en/docs/core-board',
+      description: '4 items',
+      items: [],
+    },
+    {
+      type: 'category',
+      label: 'Motherboard',
+      href: '/en/docs/main-board',
+      description: '9 items',
+      items: [],
+    },
+    {
+      type: 'category',
+      label: 'Terminal',
+      href: '/en/docs/terminal',
+      description: '15 items',
+      items: [],
+    },
+    {
+      type: 'category',
+      label: 'AIOT Solutions',
+      href: '/en/docs/aiot-solutions',
+      description: 'Solutions and product collections',
+      items: [],
+    },
+    {
+      type: 'category',
+      label: 'OpenHarmony',
+      href: '/en/docs/openharmony',
+      description: 'OpenHarmony documentation',
+      items: [],
+    },
+    {
+      type: 'category',
+      label: 'MineHarmony',
+      href: '/en/docs/mineharmony',
+      description: 'MineHarmony documentation',
+      items: [],
+    },
+    {
+      type: 'category',
+      label: 'Other',
+      href: '/en/docs/reference',
+      description: 'Reference documents',
+      items: [],
+    },
+  ]}
+/>

@@ -15,12 +15,14 @@ function filterEnglishSidebarItems(items) {
     }
 
     const filteredItems = filterEnglishSidebarItems(item.items);
+    const hasLocalizedLink =
+      item.link?.type !== 'doc' || hasEnglishDoc(item.link.id);
 
-    if (filteredItems.length === 0) {
+    if (filteredItems.length === 0 && !hasLocalizedLink) {
       return [];
     }
 
-    if (item.link?.type === 'doc' && !hasEnglishDoc(item.link.id)) {
+    if (!hasLocalizedLink) {
       const itemWithoutLink = {...item};
       delete itemWithoutLink.link;
       return [{ ...itemWithoutLink, items: filteredItems }];
@@ -32,8 +34,37 @@ function filterEnglishSidebarItems(items) {
 
 async function localizedSidebarItemsGenerator(args) {
   const items = await args.defaultSidebarItemsGenerator(args);
+  const filteredItems = removeTopLevelReadmeLinks(items);
 
-  return isEnglishBuild() ? filterEnglishSidebarItems(items) : items;
+  return isEnglishBuild() ? filterEnglishSidebarItems(filteredItems) : filteredItems;
+}
+
+const topLevelReadmeDocIds = new Set([
+  'aiot-solutions/README',
+  'core-board/README',
+  'main-board/README',
+  'mineharmony/README',
+  'openharmony/README',
+  'reference/README',
+  'terminal/README',
+]);
+
+function removeTopLevelReadmeLinks(items) {
+  return items.flatMap((item) => {
+    if (item.type === 'doc' && topLevelReadmeDocIds.has(item.id)) {
+      return [];
+    }
+
+    if (item.type === 'link' && topLevelReadmeDocIds.has(item.docId)) {
+      return [];
+    }
+
+    if (item.type !== 'category') {
+      return [item];
+    }
+
+    return [{...item, items: removeTopLevelReadmeLinks(item.items)}];
+  });
 }
 
 const productNavGroups = [
