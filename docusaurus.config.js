@@ -205,6 +205,16 @@ const contextualProductGroups = {
   MineHarmony: 'mineharmony',
 };
 
+// 每个顶部分类对应的分类首页（docs_cn/<category>/README.md 的 slug）。
+const productNavGroupLinks = {
+  '核心板': '/docs/core-board',
+  '主板': '/docs/main-board',
+  '终端': '/docs/terminal',
+  'AIOT解决方案': '/docs/aiot-solutions',
+  OpenHarmony: '/docs/openharmony',
+  MineHarmony: '/docs/mineharmony',
+};
+
 const withSidebarContext = (to, section) =>
   section ? `${to}?section=${section}` : to;
 
@@ -224,12 +234,14 @@ const getProductNavbarItem = (label, section) =>
 
 const productNavbarItems = productNavGroups.map((group) => {
   const section = contextualProductGroups[group.label];
+  const groupLink = productNavGroupLinks[group.label];
 
   return {
     type: 'dropdown',
     label: group.label,
     position: 'left',
     className: 'product-nav-dropdown',
+    ...(groupLink ? {to: withSidebarContext(groupLink, section)} : {}),
     items: group.items.map((label) => getProductNavbarItem(label, section)),
   };
 });
