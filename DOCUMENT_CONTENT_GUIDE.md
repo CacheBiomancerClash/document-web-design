@@ -13,7 +13,7 @@
 | `docs/` | 中文文档根目录，中文页面都放这里。 |
 | `i18n/en/docusaurus-plugin-content-docs/current/` | 英文文档根目录，只有有英文内容时才同步创建。 |
 | `static/` | 全站公共静态资源，比如 logo、全站共用图片。普通文章图片不建议放这里。 |
-| `scripts/` | 文档准备脚本，`prepare-docs` 会自动补 `_category_.json`、转换图片。 |
+| `scripts/` | 文档准备脚本，`prepare-docs` 会自动补分类信息、转换图片。 |
 | `sidebars.js` | 侧边栏入口配置，大部分产品目录会按文件夹自动生成。 |
 
 ## 2. 当前文档层级
@@ -24,8 +24,7 @@
 docs/
 ├── core-board/                 # 核心板
 │   └── rk3588-core-board/      # 某个产品
-│       ├── _category_.json     # 产品在侧边栏里的名称/顺序
-│       ├── product-specification.md
+│       ├── README.md           # 产品规格书，同时作为该产品的分类首页
 │       ├── wiki-tutorial.md
 │       └── wiki-tutorial-assets/
 ├── main-board/                 # 主板
@@ -39,8 +38,8 @@ docs/
 英文目录路径要和中文目录保持一致：
 
 ```text
-中文：docs/core-board/rk3588-core-board/product-specification.md
-英文：i18n/en/docusaurus-plugin-content-docs/current/core-board/rk3588-core-board/product-specification.md
+中文：docs/core-board/rk3588-core-board/README.md
+英文：i18n/en/docusaurus-plugin-content-docs/current/core-board/rk3588-core-board/README.md
 ```
 
 如果文章只有中文，不要在英文目录创建同名文件。
@@ -57,37 +56,25 @@ docs/
 docs/core-board/rk3576-core-board/
 ```
 
-### 第二步：新增 `_category_.json`
+### 第二步：新增产品规格书 `README.md`
 
-`_category_.json` 控制产品在侧边栏中的显示名称和排序。
-
-```json
-{
-  "label": "RK3576 核心板",
-  "position": 5
-}
-```
-
-说明：
-
-- `label`：侧边栏显示的产品名称。
-- `position`：排序数字，越小越靠前。
-
-### 第三步：新增产品文章
+产品规格书直接写成产品目录下的 `README.md`，它会自动成为该产品的“分类首页”。产品目录
+**不再需要** `_category_.json`：产品在侧边栏里的名称和排序，由 `README.md` front matter
+里的 `sidebar_label` 和 `sidebar_position` 决定。
 
 常见产品文章文件：
 
 ```text
-docs/core-board/rk3576-core-board/product-specification.md
+docs/core-board/rk3576-core-board/README.md
 docs/core-board/rk3576-core-board/wiki-tutorial.md
 ```
 
-`product-specification.md` 示例：
+`README.md` 示例：
 
 ```md
 ---
-sidebar_position: 1
-sidebar_label: 产品规格书
+sidebar_position: 5
+sidebar_label: RK3576 核心板
 title: RK3576 核心板产品规格书
 ---
 
@@ -95,6 +82,12 @@ title: RK3576 核心板产品规格书
 
 ![第 2 页](./images/page-02.webp)
 ```
+
+说明：
+
+- `sidebar_label`：侧边栏显示的产品名称（相当于原来 `_category_.json` 的 `label`）。
+- `sidebar_position`：排序数字，越小越靠前（相当于原来的 `position`）。
+- 点击侧边栏里的产品名称会直接打开这份规格书。
 
 `wiki-tutorial.md` 示例：
 
@@ -219,7 +212,7 @@ docs/core-board/rk3588-core-board/user-guide-assets/picture1.webp
 规格书目前常用 `images/`：
 
 ```text
-docs/core-board/rk3588-core-board/product-specification.md
+docs/core-board/rk3588-core-board/README.md
 docs/core-board/rk3588-core-board/images/page-02.webp
 ```
 
@@ -271,7 +264,7 @@ npm run prepare-docs
 它会做两件事：
 
 1. 把 Markdown 里引用的本地 `png/jpg/jpeg` 图片转换成 `webp`。
-2. 自动补齐缺失的 `_category_.json` 和英文文档路径索引。
+2. 自动补齐缺失的 `_category_.json`（带 `README.md` 的产品目录会跳过）和英文文档路径索引。
 
 然后运行构建：
 
@@ -284,7 +277,7 @@ npm run build
 ## 9. 提交前检查清单
 
 - [ ] 新文章放在正确分类目录下。
-- [ ] 产品目录有 `_category_.json`。
+- [ ] 产品规格书写成产品目录下的 `README.md`，并带 `sidebar_label`、`sidebar_position`（无需 `_category_.json`）。
 - [ ] 文章有 frontmatter：`sidebar_position`、`sidebar_label`、`title`。
 - [ ] 图片放在文章旁边的资源目录，引用路径是相对路径。
 - [ ] 只有中文内容时没有新增英文目录文件。

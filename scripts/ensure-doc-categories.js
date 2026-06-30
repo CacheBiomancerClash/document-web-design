@@ -67,6 +67,22 @@ function hasSameNameDoc(dirPath) {
   );
 }
 
+// A directory whose category index page is a doc (README / index / same-name)
+// derives its sidebar label and position from that doc's front matter, so it
+// must not get an auto-generated `_category_.json`.
+function hasCategoryIndexDoc(dirPath) {
+  const dirName = path.basename(dirPath).toLowerCase();
+
+  return fs.readdirSync(dirPath, { withFileTypes: true }).some((entry) => {
+    if (!entry.isFile() || !/\.(md|mdx)$/i.test(entry.name)) {
+      return false;
+    }
+
+    const baseName = path.parse(entry.name).name.toLowerCase();
+    return baseName === 'index' || baseName === 'readme' || baseName === dirName;
+  });
+}
+
 function ensureSameNameDocVisible(dirPath) {
   const categoryPath = path.join(dirPath, '_category_.json');
 
@@ -94,6 +110,12 @@ function ensureCategoryFile(dirPath) {
   }
 
   if (!hasDocContent(dirPath)) {
+    return;
+  }
+
+  // The category index doc (README.md) already defines this category's label
+  // and position via its front matter, so don't generate a `_category_.json`.
+  if (hasCategoryIndexDoc(dirPath)) {
     return;
   }
 

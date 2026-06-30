@@ -46,11 +46,11 @@ npm run build
 英文文档请和中文文档保持相同相对路径和文件名，例如：
 
 ```text
-docs/core-board/rk3588-core-board/product-specification.md
-i18n/en/docusaurus-plugin-content-docs/current/core-board/rk3588-core-board/product-specification.md
+docs/core-board/rk3588-core-board/README.md
+i18n/en/docusaurus-plugin-content-docs/current/core-board/rk3588-core-board/README.md
 ```
 
-新增 Markdown / MDX 后，`npm run ensure-categories` 会扫描中文和英文目录，自动补齐缺失的 `_category_.json`。GitHub Actions 在 push 构建时会把这些自动生成的分类文件提交回仓库，左侧栏会跟随文档目录自动更新。
+产品规格书直接写成产品目录下的 `README.md`，它会成为该产品的分类首页；这类目录不再需要 `_category_.json`，侧边栏名称和排序由 `README.md` front matter 里的 `sidebar_label`、`sidebar_position` 决定。新增 Markdown / MDX 后，`npm run ensure-categories` 会扫描中文和英文目录，为没有 `README.md` 索引页的目录自动补齐缺失的 `_category_.json`。GitHub Actions 在 push 构建时会把这些自动生成的分类文件提交回仓库，左侧栏会跟随文档目录自动更新。
 
 ## 主要目录
 
