@@ -103,8 +103,26 @@ title: RK3588 核心板产品规格书
 - `sidebar_label`：侧边栏里这个产品的名称。
 - `slug`：产品首页访问路径，例如 `/core-board/rk3588-core-board`。
 - `sidebar_position`：产品内部各页面的排序（产品首页一般设为 1）。
+- `description`：**（可选）分类首页里这张产品卡片标题下方显示的副标题**，详见 3.3。
 
 > 没有产品规格书的产品，就不用建 `README.md`；侧边栏名称会退化成脚本按目录名补的默认值，可按需再补 `README.md`。
+
+### 3.3 卡片副标题（`description`）显示规则
+
+分类首页用 `<DocCardList />` 把下属分类/产品渲染成卡片。每张卡片标题下方的副标题遵循以下规则：
+
+- 如果该分类/产品的 `README.md` front matter 里写了 `description:`，卡片副标题就显示它；
+- 如果**没写** `description:`，卡片就**只显示标题、不显示副标题**（不会再自动回退成正文首段或首图的 alt 文本）。
+
+需要副标题时，在对应 `README.md` 里加一行即可，例如：
+
+```md
+---
+sidebar_label: 拼接屏处理器
+title: 拼接屏处理器产品规格书
+description: 面向拼接大屏的高性能处理器
+---
+```
 
 ## 4. 源 md 加 `split_by_h2: true` 自动拆分卡片子页面
 

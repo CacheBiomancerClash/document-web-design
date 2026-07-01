@@ -1467,3 +1467,37 @@ html[lang='en'] .bearkey-official-nav.navbar__link {
     font-size: 0.92rem;
   }
 }
+
+/* DocCardList product/category grid: 2 columns + compact cards */
+.theme-doc-markdown .row > article:has(> a.card) {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-bottom: 1.25rem;
+}
+
+.theme-doc-markdown .row > article > a.card {
+  padding: 1rem 1.25rem;
+}
+
+.theme-doc-markdown .row > article > a.card h2 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  padding-top: 0;
+  border-top: 0;
+  font-size: 1.2rem;
+  align-items: flex-start;
+}
+
+.theme-doc-markdown .row > article > a.card h2 span.text--truncate {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .theme-doc-markdown .row > article:has(> a.card) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
