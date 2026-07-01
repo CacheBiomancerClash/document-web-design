@@ -1468,10 +1468,10 @@ html[lang='en'] .bearkey-official-nav.navbar__link {
   }
 }
 
-/* DocCardList product/category grid: 3 columns + compact cards */
+/* DocCardList product/category grid: 2 columns + compact cards */
 .theme-doc-markdown .row > article:has(> a.card) {
-  flex: 0 0 33.3333%;
-  max-width: 33.3333%;
+  flex: 0 0 50%;
+  max-width: 50%;
   margin-bottom: 1.25rem;
 }
 
@@ -1485,13 +1485,6 @@ html[lang='en'] .bearkey-official-nav.navbar__link {
   padding-top: 0;
   border-top: 0;
   font-size: 1.2rem;
-}
-
-@media (max-width: 996px) {
-  .theme-doc-markdown .row > article:has(> a.card) {
-    flex-basis: 50%;
-    max-width: 50%;
-  }
 }
 
 @media (max-width: 640px) {
