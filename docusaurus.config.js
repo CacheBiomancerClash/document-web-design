@@ -278,6 +278,16 @@ const config = {
       onBrokenMarkdownLinks: 'warn',
       onBrokenMarkdownImages: 'warn',
     },
+    // 未在 front matter 显式写 description 的文档，统一补成空串，
+    // 避免 Docusaurus 回退用正文首段（如首图 alt 文本）作为描述，
+    // 从而让 DocCardList 卡片在没有 description 时不显示副标题。
+    parseFrontMatter: async (params) => {
+      const result = await params.defaultParseFrontMatter(params);
+      if (result.frontMatter.description === undefined) {
+        result.frontMatter.description = '';
+      }
+      return result;
+    },
   },
 
   i18n: {
