@@ -1485,6 +1485,14 @@ html[lang='en'] .bearkey-official-nav.navbar__link {
   padding-top: 0;
   border-top: 0;
   font-size: 1.2rem;
+  align-items: flex-start;
+}
+
+.theme-doc-markdown .row > article > a.card h2 span.text--truncate {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 640px) {
