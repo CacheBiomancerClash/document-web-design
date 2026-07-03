@@ -250,7 +250,7 @@ const productNavbarItems = productNavGroups.map((group) => {
 const config = {
   title: '文档网页设计',
   tagline: '用 Markdown 驱动的产品文档网站',
-  url: 'https://docs.fengxinglong.top',
+  url: 'https://docs.bearkey.com.cn',
   favicon: 'img/favicon.png',
   baseUrl: '/',
   organizationName: 'bearkey-docs',
