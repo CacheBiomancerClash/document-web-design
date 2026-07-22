@@ -4,6 +4,8 @@ const {hasEnglishDoc, isEnglishBuild} = require('./scripts/english-docs');
 const lightCodeTheme = require('prism-react-renderer').themes.github;
 const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 const splitDocSourceIds = new Set(require('./src/generated/splitDocSourceIds.json'));
+const docsEditBaseUrl =
+  'https://github.com/CacheBiomancerClash/document-web-design/edit/devin/initial-readme/';
 const splitDocSourcePaths = [...splitDocSourceIds].flatMap((id) => [
   `${id}.md`,
   `${id}.mdx`,
@@ -260,6 +262,7 @@ const config = {
   organizationName: 'bearkey-docs',
   projectName: 'docs',
   customFields: {
+    docsEditBaseUrl,
     docImageCdnBase:
       process.env.DOC_IMAGE_CDN_BASE ||
       process.env.MANUAL_IMAGE_CDN_BASE ||
@@ -333,8 +336,7 @@ const config = {
           exclude: splitDocSourcePaths,
           sidebarPath: require.resolve('./sidebars.js'),
           sidebarItemsGenerator: localizedSidebarItemsGenerator,
-          editUrl:
-            'https://github.com/bearkey-docs/docs/tree/main/',
+          editUrl: docsEditBaseUrl,
         },
         blog: false,
         theme: {
