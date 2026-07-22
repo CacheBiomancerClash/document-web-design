@@ -35,23 +35,23 @@ adb的工具在bin目录下，打开系统设置环境变量到该目录即可�
 
 ![image-20260703145838332](.\images\image-20260703154041402.png)
 
-![image-20260703154138678](images/image-20260703154138678.png)
+![image-20260703154138678](images/image-20260703154138678.webp)
 
 为避免驱动安装出现问题，请先点击驱动卸载，再点击驱动安装，驱动成功安装后，如下所示
 
-![image-20260703154211142](images/image-20260703154211142.png)
+![image-20260703154211142](images/image-20260703154211142.webp)
 
 ### 	2.3 RockChip烧录软件安装
 
 解压后直接运行即可（最好解压到全英文路径下面）
 
-![image-20260703154224989](images/image-20260703154224989.png)
+![image-20260703154224989](images/image-20260703154224989.webp)
 
 ## 3. 固件烧录
 
 用双头USB连接OTG口和PC的USB口
 
-![image-20260703154437621](images/image-20260703154437621.png)
+![image-20260703154437621](images/image-20260703154437621.webp)
 
 如何进入烧写模式(Loader)
 
@@ -60,35 +60,35 @@ adb的工具在bin目录下，打开系统设置环境变量到该目录即可�
 
 这时候进入到烧录工具可以看到下面这个现象
 
-![image-20260703154928499](images/image-20260703154928499.png)
+![image-20260703154928499](images/image-20260703154928499.webp)
 
 导入配置
 
-![image-20260703155038288](images/image-20260703155038288.png)
+![image-20260703155038288](images/image-20260703155038288.webp)
 
-![image-20260703155105076](images/image-20260703155105076.png)
+![image-20260703155105076](images/image-20260703155105076.webp)
 
 导入完成后需要根据列出的项名字选择对应的img文件
 
 例如
 
-![image-20260703155221333](images/image-20260703155221333.png)
+![image-20260703155221333](images/image-20260703155221333.webp)
 
 选择完成后勾选点击执行岂可。
 
-![image-20260703155312653](images/image-20260703155312653.png)
+![image-20260703155312653](images/image-20260703155312653.webp)
 
 ## 4. 基础功能验证
 
 ### 4.1 USB功能测试
 
-![image-20260703174227425](images/image-20260703174227425.png)
+![image-20260703174227425](images/image-20260703174227425.webp)
 
 插入U盘到USB-HOST就，使用adb shell进入设备终端可以查看当前U盘是否被挂载
 
 ### 4.2 DODI功能测试
 
-![image-20260703181123161](images/image-20260703181123161.png)
+![image-20260703181123161](images/image-20260703181123161.webp)
 
 ```
 IN1节点 /sys/devices/platform/gpios_dido/DIN1
@@ -105,7 +105,7 @@ IN1与IN2使用cat查看输入，返回值为0为输入低电平，返回值为1
 
 ### 4.3 LED功能测试
 
-![image-20260703181226587](images/image-20260703181226587.png)
+![image-20260703181226587](images/image-20260703181226587.webp)
 
 ```
 LED1控制节点 /sys/class/leds/led-1/brightness
@@ -118,9 +118,9 @@ LED4控制节点 /sys/class/leds/led-4/brightness
 
 ### 4.4 CAN功能测试
 
-![image-20260703181311188](images/image-20260703181311188.png)
+![image-20260703181311188](images/image-20260703181311188.webp)
 
-![image-20260703181321455](images/image-20260703181321455.png)
+![image-20260703181321455](images/image-20260703181321455.webp)
 
 ```
 CAN测试方法
@@ -150,7 +150,7 @@ candump can1
 
 ### 4.5 GPS功能测试
 
-![image-20260703181436162](images/image-20260703181436162.png)
+![image-20260703181436162](images/image-20260703181436162.webp)
 
 ```
 执行microcom -s 115200 /dev/ttyS5 可以看见GPS报文
@@ -158,7 +158,7 @@ candump can1
 
 ### 4.6 RS232 RS485
 
-![image-20260703181516335](images/image-20260703181516335.png)
+![image-20260703181516335](images/image-20260703181516335.webp)
 
 ```
 485_1 UART1 /dev/ttyS1   485_2 UART2 /dev/ttyS2

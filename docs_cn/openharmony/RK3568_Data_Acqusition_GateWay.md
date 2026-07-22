@@ -363,7 +363,7 @@ UART4_RS485接口图：
 
    针脚定义
 
-   ![1](images/j1.5.png)
+   ![1](images/j1.5.webp)
 
 2. PC端串口助手
 

@@ -3,7 +3,10 @@
   "core-board/rk3568-industrial-core-board/wiki-tutorial",
   "core-board/rk3588-core-board/wiki-tutorial",
   "core-board/tb-96aiot-1808co/wiki-tutorial",
+  "main-board/rk3506-industrial-main-board/Quick-Start-Manual-CN",
   "main-board/rk3568-main-board/wiki-tutorial",
   "main-board/robo3588-robot-main-board/wiki-tutorial",
-  "terminal/bq8180-ai-mini-pc/wiki-tutorial"
+  "terminal/bq8180-ai-mini-pc/wiki-tutorial",
+  "terminal/rk3506-industrial-panel/wiki-tutorial",
+  "terminal/ten-six-inch-tablet/wiki-tutorial"
 ]

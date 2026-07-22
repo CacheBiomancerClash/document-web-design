@@ -385,7 +385,7 @@ microcom -s 115200 /dev/ttyS0
 
 测试结果：
 
-![image-20260708110448114](images/image-20260708110448114.png)
+![image-20260708110448114](images/image-20260708110448114.webp)
 
 ---
 

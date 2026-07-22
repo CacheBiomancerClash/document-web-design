@@ -107,6 +107,28 @@
       "href": "wiki-tutorial/05"
     }
   ],
+  "main-board/rk3506-industrial-main-board/Quick-Start-Manual-CN": [
+    {
+      "type": "link",
+      "label": "1. 硬件清单",
+      "href": "Quick-Start-Manual-CN/01"
+    },
+    {
+      "type": "link",
+      "label": "2. PC环境配置",
+      "href": "Quick-Start-Manual-CN/02"
+    },
+    {
+      "type": "link",
+      "label": "3. 固件烧录",
+      "href": "Quick-Start-Manual-CN/03"
+    },
+    {
+      "type": "link",
+      "label": "4. 基础功能验证",
+      "href": "Quick-Start-Manual-CN/04"
+    }
+  ],
   "main-board/rk3568-main-board/wiki-tutorial": [
     {
       "type": "link",
@@ -196,6 +218,50 @@
       "type": "link",
       "label": "七、常见问题",
       "href": "wiki-tutorial/07"
+    }
+  ],
+  "terminal/rk3506-industrial-panel/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "1. 硬件清单",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "2. PC环境配置",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "3. 固件烧录",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "4. 基础功能验证",
+      "href": "wiki-tutorial/04"
+    }
+  ],
+  "terminal/ten-six-inch-tablet/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "二、OpenHarmony开发",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "三、Android开发",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "四、常见问题",
+      "href": "wiki-tutorial/04"
     }
   ]
 }
