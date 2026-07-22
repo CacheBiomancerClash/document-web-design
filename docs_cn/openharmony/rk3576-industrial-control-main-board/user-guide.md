@@ -46,15 +46,15 @@ RK3576 目前支持 OTG 烧写方式。在用户资料中提供了相应的烧�
 
 ***
 
-<img src="images\1.png" alt="1" style={{ zoom: '50%' }} />
+<img src="../images/1.png" alt="1" style={{ zoom: '50%' }} />
 
 为避免驱动安装出现问题，请先点击驱动卸载，再点击驱动安装。
 
-<img src="images/8.png" alt="8" style={{ zoom: '75%' }} />
+<img src="../images/8.png" alt="8" style={{ zoom: '75%' }} />
 
 驱动成功安装后如下所示：
 
-<img src="images/9.png" style={{ zoom: '90%' }} />
+<img src="../images/9.png" style={{ zoom: '90%' }} />
 
 ***
 
@@ -91,29 +91,29 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 3. 清空工具所有项
 
-   <img src="images/11.png" alt="11" style={{ zoom: '75%' }} />
+   <img src="../images/11.png" alt="11" style={{ zoom: '75%' }} />
 
 4. 清空完成后，点击 **导入配置**；
 
-   <img src="images/12.png" alt="12" style={{ zoom: '75%' }} />
+   <img src="../images/12.png" alt="12" style={{ zoom: '75%' }} />
 
 5. 选择镜像目录下的 `config.cfg` 文件；
 
-   <img src="images\2.png" alt="2" style={{ zoom: '75%' }} />
+   <img src="../images/2.png" alt="2" style={{ zoom: '75%' }} />
 
-   <img src="images\3.png" alt="3" style={{ zoom: '75%' }} />
+   <img src="../images/3.png" alt="3" style={{ zoom: '75%' }} />
 
 6. 依次选择工具所勾选的镜像文件；
 
-   <img src="images\4.png" alt="4" style={{ zoom: '75%' }} />
+   <img src="../images/4.png" alt="4" style={{ zoom: '75%' }} />
 
-   <img src="images\5.png" alt="5" style={{ zoom: '75%' }} />
+   <img src="../images/5.png" alt="5" style={{ zoom: '75%' }} />
 
-   <img src="images\6.png" alt="6" style={{ zoom: '75%' }} />
+   <img src="../images/6.png" alt="6" style={{ zoom: '75%' }} />
 
 7. 点击 **执行** 按钮开始升级。
 
-   <img src="images/13.png" alt="13" style={{ zoom: '75%' }} />
+   <img src="../images/13.png" alt="13" style={{ zoom: '75%' }} />
 
    等待工具左侧显示烧录完成即可。
 
@@ -136,7 +136,7 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 开发板启动桌面显示如下：
 
-<img src="images/14.png" alt="桌面" style={{ zoom: '55%' }} />
+<img src="../images/14.png" alt="桌面" style={{ zoom: '55%' }} />
 
 ***
 
@@ -158,7 +158,7 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 6. 输入密码并点击连接；
 
-   <img src="images/15.png" alt="15" style={{ zoom: '75%' }} />
+   <img src="../images/15.png" alt="15" style={{ zoom: '75%' }} />
 
 7. 连接成功后，打开命令行窗口hdc shell 进入Openharmony系统后，进入系统后可使用如下命令查看网络信息：
 
@@ -265,21 +265,21 @@ OHOS_SOCKET_hdcd=11
 
 串口硬件接口介绍：
 
-<img src="images/w1.jpg" alt="485 接口" style={{ zoom: '60%' }} />
+<img src="../images/w1.jpg" alt="485 接口" style={{ zoom: '60%' }} />
 
 测试工具介绍：
 
 1. 485串口测试工具
 
-   <img src="images/17.png" alt="17" style={{ zoom: '85%' }} />
+   <img src="../images/17.png" alt="17" style={{ zoom: '85%' }} />
 
 2. 232串口测试工具
 
-   <img src="images/18.png" alt="18" style={{ zoom: '110%' }} />
+   <img src="../images/18.png" alt="18" style={{ zoom: '110%' }} />
 
 3. PC端串口助手
 
-   <img src="images/19.png" alt="19" style={{ zoom: '110%' }} />
+   <img src="../images/19.png" alt="19" style={{ zoom: '110%' }} />
 
    
 
@@ -293,7 +293,7 @@ OHOS_SOCKET_hdcd=11
 
 输入命令后，在命令行下方输入数据即可。串口助手这边接收到数据。
 
-<img src="images/20.png" style={{ zoom: '67%' }} />
+<img src="../images/20.png" style={{ zoom: '67%' }} />
 
 #### 3.5.3 RS485_UART2 接收测试
 
@@ -303,7 +303,7 @@ OHOS_SOCKET_hdcd=11
 
 串口助手发送数据后，终端这边接收到数据。
 
-<img src="images/j3.png"  />
+<img src="../images/j3.png"  />
 
 ***
 
@@ -313,15 +313,15 @@ OHOS_SOCKET_hdcd=11
 
 使用工具连接开发板上的 232 串口、以及打开所提供的资料中的串口助手。
 
-<img src="images/18.png" alt="232 接口" style={{ zoom: '110%' }} />
+<img src="../images/18.png" alt="232 接口" style={{ zoom: '110%' }} />
 
 串口引脚示意图（丝印标识与 TX、RX、GND 对应位置）：
 
-<img src="images/w2.jpg" alt="串口引脚示意图" style={{ zoom: '60%' }} />
+<img src="../images/w2.jpg" alt="串口引脚示意图" style={{ zoom: '60%' }} />
 
 **设置串口助手：**
 
-<img src="images/19.png" alt="串口助手设置" style={{ zoom: '110%' }} />
+<img src="../images/19.png" alt="串口助手设置" style={{ zoom: '110%' }} />
 
 ***
 
@@ -333,7 +333,7 @@ OHOS_SOCKET_hdcd=11
 
 输入命令后，在命令行下方输入 `beiqi`，串口助手这边接收到数据。
 
-<img src="images/20.png" style={{ zoom: '67%' }} />
+<img src="../images/20.png" style={{ zoom: '67%' }} />
 
 ***
 
@@ -345,7 +345,7 @@ OHOS_SOCKET_hdcd=11
 
 串口助手发送数据后，终端这边接收到数据。
 
-<img src="images/22.png" style={{ zoom: '67%' }} />
+<img src="../images/22.png" style={{ zoom: '67%' }} />
 
 ***
 
@@ -364,7 +364,7 @@ OHOS_SOCKET_hdcd=11
 
 如图所示：
 
-<img src="images/23.png" alt="USB 鼠标测试" style={{ zoom: '50%' }} />
+<img src="../images/23.png" alt="USB 鼠标测试" style={{ zoom: '50%' }} />
 
 ***
 
@@ -394,7 +394,7 @@ USB 端口可连接以下设备进行测试：
 
 1. 确认蓝牙天线已正确连接；
 
-   <img src="images/w3.jpg" alt="蓝牙天线接线图" style={{ zoom: '60%' }} />
+   <img src="../images/w3.jpg" alt="蓝牙天线接线图" style={{ zoom: '60%' }} />
 
 2. 打开系统 **设置**；
 
@@ -410,7 +410,7 @@ USB 端口可连接以下设备进行测试：
 
 8. 确认连接成功。
 
-<img src="images/24.png" alt="蓝牙连接" style={{ zoom: '60%' }} />
+<img src="../images/24.png" alt="蓝牙连接" style={{ zoom: '60%' }} />
 
 测试判断：
 
@@ -427,13 +427,13 @@ USB 端口可连接以下设备进行测试：
 
 1. 找到开发板上丝印标识为 `PHONE` 的接口；
 
-   <img src="images/w4.jpg" alt="耳机接线图" style={{ zoom: '60%' }} />
+   <img src="../images/w4.jpg" alt="耳机接线图" style={{ zoom: '60%' }} />
 
 2. 插入耳机；
 
 3. 打开桌面音乐播放器；
 
-   <img src="images/25.png" alt="音乐播放器" style={{ zoom: '60%' }} />
+   <img src="../images/25.png" alt="音乐播放器" style={{ zoom: '60%' }} />
 
 4. 点击播放音乐；
 
@@ -452,7 +452,7 @@ USB 端口可连接以下设备进行测试：
 
 1. 按下 `音量 +` 按键；
 
-   <img src="images/w6.jpg" alt="音量按键" style={{ zoom: '60%' }} />
+   <img src="../images/w6.jpg" alt="音量按键" style={{ zoom: '60%' }} />
 
 3. 查看桌面音量状态是否有更新；
 
@@ -463,7 +463,7 @@ USB 端口可连接以下设备进行测试：
 - 音量状态随按键变化，说明音量键功能正常；
 - 系统桌面出现音量弹窗显示。
 
-<img src="images/26.png" alt="音量测试效果" style={{ zoom: '60%' }} />
+<img src="../images/26.png" alt="音量测试效果" style={{ zoom: '60%' }} />
 
 ***
 
@@ -477,17 +477,17 @@ USB 端口可连接以下设备进行测试：
 
    链接: https://pan.baidu.com/s/1sHKpNJbwwqLKPEmCpmjfuQ 提取码: j6imdemo->bq_recorder.hap
 
-   <img src="images/j1.png" style={{ zoom: '70%' }} />
+   <img src="../images/j1.png" style={{ zoom: '70%' }} />
 
    MIC 接线图
 
-   <img src="images/w5.jpg" alt="相机接口示意图" style={{ zoom: '60%' }} />
+   <img src="../images/w5.jpg" alt="相机接口示意图" style={{ zoom: '60%' }} />
 
 2. 安装录音播放应用
 
 3. 点击打开应用后，点击录音，录音完毕后，点击播放，插上耳机或扬声器，测试是否正常
 
-<img src="images/j2.png" style={{ zoom: '70%' }} />
+<img src="../images/j2.png" style={{ zoom: '70%' }} />
 
 测试判断：  
 
@@ -502,7 +502,7 @@ USB 端口可连接以下设备进行测试：
 
 1. 点击打开音乐应用，找到丝印 SPK 处插上喇叭测试左右声道喇叭是否正常。
 
-<img src="images/W.jpg" style={{ zoom: '60%' }} />
+<img src="../images/W.jpg" style={{ zoom: '60%' }} />
 
 
 
@@ -518,7 +518,7 @@ USB 端口可连接以下设备进行测试：
 
 1. 打开系统相机查看相机成像。
 
-<img src="images/W7.jpg" style={{ zoom: '60%' }} />
+<img src="../images/W7.jpg" style={{ zoom: '60%' }} />
 
 2. 依次接好 mipi 相机，打开系统相机应用进行测试，测试相机是否正常工作
 

@@ -46,15 +46,15 @@ RK3568 目前支持 OTG 烧写方式。在用户资料中提供了相应的烧�
 
 ***
 
-<img src="images\1.1.png" alt="1" style={{ zoom: '50%' }} />
+<img src="../images/1.1.png" alt="1" style={{ zoom: '50%' }} />
 
 为避免驱动安装出现问题，请先点击驱动卸载，再点击驱动安装。
 
-<img src="images/1.2.png" alt="8" style={{ zoom: '75%' }} />
+<img src="../images/1.2.png" alt="8" style={{ zoom: '75%' }} />
 
 驱动成功安装后如下所示：
 
-<img src="images/1.3.png" style={{ zoom: '90%' }} />
+<img src="../images/1.3.png" style={{ zoom: '90%' }} />
 
 ***
 
@@ -88,29 +88,29 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 3. 清空工具所有项
 
-   <img src="images/2.1.png" alt="11" style={{ zoom: '75%' }} />
+   <img src="../images/2.1.png" alt="11" style={{ zoom: '75%' }} />
 
 4. 清空完成后，点击 **导入配置**；
 
-   <img src="images/2.2.png" alt="12" style={{ zoom: '75%' }} />
+   <img src="../images/2.2.png" alt="12" style={{ zoom: '75%' }} />
 
 5. 选择镜像目录下的 `config.cfg` 文件；
 
-   <img src="images\2.3.png" alt="2" style={{ zoom: '75%' }} />
+   <img src="../images/2.3.png" alt="2" style={{ zoom: '75%' }} />
 
-   <img src="images\2.4.png" alt="3" style={{ zoom: '75%' }} />
+   <img src="../images/2.4.png" alt="3" style={{ zoom: '75%' }} />
 
 6. 依次选择工具所勾选的镜像文件；
 
-   <img src="images\2.5.png" alt="4" style={{ zoom: '75%' }} />
+   <img src="../images/2.5.png" alt="4" style={{ zoom: '75%' }} />
 
-   <img src="images\2.6.png" alt="5" style={{ zoom: '75%' }} />
+   <img src="../images/2.6.png" alt="5" style={{ zoom: '75%' }} />
 
-   <img src="images\2.7.png" alt="6" style={{ zoom: '75%' }} />
+   <img src="../images/2.7.png" alt="6" style={{ zoom: '75%' }} />
 
 7. 点击 **执行** 按钮开始升级。
 
-   <img src="images/2.8.png" alt="13" style={{ zoom: '75%' }} />
+   <img src="../images/2.8.png" alt="13" style={{ zoom: '75%' }} />
 
    等待工具左侧显示烧录完成即可。
 
@@ -138,7 +138,7 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 ***
 
-<img src="images/3.1.png" alt="桌面" style={{ zoom: '55%' }} />
+<img src="../images/3.1.png" alt="桌面" style={{ zoom: '55%' }} />
 
 ***
 
@@ -160,7 +160,7 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 6. 输入密码并点击连接；
 
-   <img src="images/3.2.png" alt="15" style={{ zoom: '75%' }} />
+   <img src="../images/3.2.png" alt="15" style={{ zoom: '75%' }} />
 
 7. 连接成功后，打开命令行窗口hdc shell 进入Openharmony系统后，进入系统后可使用如下命令查看网络信息：
 
@@ -279,21 +279,21 @@ Fri Nov 7 06:25:59 2025 0.000000 seconds
 
 串口硬件接口介绍：
 
-<img src="images/z3.0.png" alt="485 接口" style={{ zoom: '110%' }} />
+<img src="../images/z3.0.png" alt="485 接口" style={{ zoom: '110%' }} />
 
 测试工具介绍：
 
 1. 485串口测试工具
 
-   <img src="images/3.3.png" alt="17" style={{ zoom: '85%' }} />
+   <img src="../images/3.3.png" alt="17" style={{ zoom: '85%' }} />
 
 2. 232串口测试工具
 
-   <img src="images/3.4.png" alt="18" style={{ zoom: '110%' }} />
+   <img src="../images/3.4.png" alt="18" style={{ zoom: '110%' }} />
 
 3. PC端串口助手
 
-   <img src="images/3.5.png" alt="19" style={{ zoom: '110%' }} />
+   <img src="../images/3.5.png" alt="19" style={{ zoom: '110%' }} />
 
    
 
@@ -303,7 +303,7 @@ Fri Nov 7 06:25:59 2025 0.000000 seconds
 
 UART_RS485接口图：
 
-<img src="images/z3.2.jpg" alt="u3" style={{ zoom: '60%' }} />
+<img src="../images/z3.2.jpg" alt="u3" style={{ zoom: '60%' }} />
 
 ```shell
 # microcom -s 115200 /dev/ttyS3
@@ -311,7 +311,7 @@ UART_RS485接口图：
 
 输入命令后，在命令行下方输入数据即可。串口助手这边接收到数据。
 
-<img src="images/j1.2.png" style={{ zoom: '110%' }} />
+<img src="../images/j1.2.png" style={{ zoom: '110%' }} />
 
 **3.6.3 <font face="微软雅黑"> RS485_UART3</font>接收测试**
 
@@ -321,7 +321,7 @@ UART_RS485接口图：
 
 串口助手发送数据后，终端这边接收到数据。
 
-<img src="images/j1.3.png"  />
+<img src="../images/j1.3.png"  />
 
 ***
 
@@ -329,7 +329,7 @@ UART_RS485接口图：
 
 UART4_RS485接口图：
 
-<img src="images/z3.1.jpg" alt="u4" style={{ zoom: '60%' }} />
+<img src="../images/z3.1.jpg" alt="u4" style={{ zoom: '60%' }} />
 
 ```shell
 # microcom -s 115200 /dev/ttyS4
@@ -337,7 +337,7 @@ UART4_RS485接口图：
 
 输入命令后，在命令行下方输入数据即可。串口助手这边接收到数据。
 
-<img src="images/j1.2.png" style={{ zoom: '110%' }} />
+<img src="../images/j1.2.png" style={{ zoom: '110%' }} />
 
 **3.6.5<font face="微软雅黑"> RS485_UART4</font>接收测试**
 
@@ -347,7 +347,7 @@ UART4_RS485接口图：
 
 串口助手发送数据后，终端这边接收到数据。
 
-<img src="images/j1.4.png"  />
+<img src="../images/j1.4.png"  />
 
 ***
 
@@ -359,15 +359,15 @@ UART4_RS485接口图：
 
 1. 232串口测试工具
 
-   <img src="images/3.4.png" alt="18" style={{ zoom: '110%' }} />
+   <img src="../images/3.4.png" alt="18" style={{ zoom: '110%' }} />
 
    针脚定义
 
-   ![1](images/j1.5.webp)
+   ![1](../images/j1.5.webp)
 
 2. PC端串口助手
 
-   <img src="images/j1.0.png" alt="19" style={{ zoom: '110%' }} />
+   <img src="../images/j1.0.png" alt="19" style={{ zoom: '110%' }} />
 
 ***
 
@@ -375,7 +375,7 @@ UART4_RS485接口图：
 
 UART7_RS232接口图：
 
-<img src="images/z3.3.jpg" style={{ zoom: '60%' }} />
+<img src="../images/z3.3.jpg" style={{ zoom: '60%' }} />
 
 ```shell
 # microcom -s 115200 /dev/ttyS7
@@ -383,7 +383,7 @@ UART7_RS232接口图：
 
 输入命令后，在命令行下方输入 `beiqi`，串口助手这边接收到数据。
 
-<img src="images/j1.1.png" style={{ zoom: '67%' }} />
+<img src="../images/j1.1.png" style={{ zoom: '67%' }} />
 
 ***
 
@@ -395,7 +395,7 @@ UART7_RS232接口图：
 
 串口助手发送数据后，终端这边接收到数据。
 
-<img src="images/j1.8.png" style={{ zoom: '67%' }} />
+<img src="../images/j1.8.png" style={{ zoom: '67%' }} />
 
 ***
 
@@ -403,7 +403,7 @@ UART7_RS232接口图：
 
 UART9_RS232接口图：
 
-<img src="images/z3.4.jpg" style={{ zoom: '60%' }} />
+<img src="../images/z3.4.jpg" style={{ zoom: '60%' }} />
 
 ```shell
 # microcom -s 115200 /dev/ttyS9
@@ -411,7 +411,7 @@ UART9_RS232接口图：
 
 输入命令后，在命令行下方输入 `beiqi`，串口助手这边接收到数据。
 
-<img src="images/j1.1.png" style={{ zoom: '67%' }} />
+<img src="../images/j1.1.png" style={{ zoom: '67%' }} />
 
 ***
 
@@ -423,7 +423,7 @@ UART9_RS232接口图：
 
 串口助手发送数据后，终端这边接收到数据。
 
-<img src="images/j2.0.png"  />
+<img src="../images/j2.0.png"  />
 
 ***
 
@@ -446,7 +446,7 @@ UART9_RS232接口图：
 
 如图所示：
 
-<img src="images/3.6.png" alt="USB 鼠标测试" style={{ zoom: '50%' }} />
+<img src="../images/3.6.png" alt="USB 鼠标测试" style={{ zoom: '50%' }} />
 
 ***
 
@@ -490,7 +490,7 @@ USB 端口可连接以下设备进行测试：
 
 8. 确认连接成功。
 
-<img src="images/3.7.png" alt="蓝牙连接" style={{ zoom: '60%' }} />
+<img src="../images/3.7.png" alt="蓝牙连接" style={{ zoom: '60%' }} />
 
 测试判断：
 
@@ -507,13 +507,13 @@ USB 端口可连接以下设备进行测试：
 
 1. 找到开发板上丝印标识为 `PHONE` 的接口；
 
-   <img src="images/Z3.5.jpg" alt="耳机接线图" style={{ zoom: '60%' }} />
+   <img src="../images/Z3.5.jpg" alt="耳机接线图" style={{ zoom: '60%' }} />
 
 2. 插入耳机；
 
 3. 打开桌面音乐播放器；
 
-   <img src="images/3.8.png" alt="音乐播放器" style={{ zoom: '60%' }} />
+   <img src="../images/3.8.png" alt="音乐播放器" style={{ zoom: '60%' }} />
 
 4. 点击播放音乐；
 

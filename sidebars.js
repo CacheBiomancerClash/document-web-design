@@ -57,6 +57,34 @@ const productSpecDoc = (label, id, suffix = '') => {
 const localizedProductSpecDoc = (label, id, suffix = '') =>
   shouldIncludeDoc(id) ? productSpecDoc(label, id, suffix) : undefined;
 
+const openHarmonyProductDoc = (label, id, articles = [], suffix = '') => {
+  if (!shouldIncludeDoc(id)) {
+    return undefined;
+  }
+
+  const articleItems = existingDocsOnly(
+    articles.map((article, index) =>
+      localizedDoc(
+        article.label,
+        article.id,
+        `${article.id}:openharmony:${suffix.codePointAt(0) || 'default'}:${index}`,
+      ),
+    ),
+  );
+
+  if (articleItems.length === 0) {
+    return { type: 'doc', label: `${label}${suffix}`, id };
+  }
+
+  return {
+    type: 'category',
+    label: `${label}${suffix}`,
+    collapsed: true,
+    link: { type: 'doc', id },
+    items: articleItems,
+  };
+};
+
 const topCategory = ({ label, section, items }) => ({
   type: 'category',
   label,
@@ -86,19 +114,39 @@ const sharedProducts = {
     localizedProductSpecDoc('拼接屏处理器', 'terminal/video-wall-processor/README', '\u200B'),
   ]),
   openHarmony: existingDocsOnly([
-    localizedProductSpecDoc('RK3568 主板', 'main-board/rk3568-main-board/README', '\u200C'),
-    localizedProductSpecDoc('RK3576 数据采集网关', 'terminal/rk3576-data-acquisition-gateway/README', '\u200C'),
-    localizedProductSpecDoc('RK3568 工业控制主板', 'main-board/rk3568-industrial-control-main-board/README', '\u200C'),
-    localizedProductSpecDoc('RK3576 工业控制主板', 'main-board/rk3576-industrial-control-main-board/README', '\u200C'),
-    localizedProductSpecDoc('8英寸平板', 'terminal/eight-inch-tablet/README', '\u200C'),
-    localizedProductSpecDoc('10.6英寸平板', 'terminal/ten-six-inch-tablet/README', '\u200C'),
-    localizedProductSpecDoc('11英寸平板', 'terminal/eleven-inch-tablet/README', '\u200C'),
-    localizedProductSpecDoc('RK3568 数据采集网关', 'terminal/rk3568-data-acquisition-gateway/README', '\u200C'),
-    localizedProductSpecDoc('RK3588 工业主板', 'main-board/rk3588-industrial-main-board/README', '\u200C'),
-    localizedProductSpecDoc('RK3576 商业显示主板', 'main-board/rk3576-commercial-display-main-board/README', '\u200C'),
-    localizedProductSpecDoc('工控屏', 'terminal/industrial-panel/README', '\u200C'),
-    localizedProductSpecDoc('RK3588 主板', 'main-board/rk3588-main-board/README', '\u200C'),
-    localizedProductSpecDoc('拼接屏处理器', 'terminal/video-wall-processor/README', '\u200C'),
+    openHarmonyProductDoc('RK3568 主板', 'main-board/rk3568-main-board/README', [
+      { label: 'OpenHarmony 用户手册', id: 'openharmony/rk3568-main-board/user-guide' },
+    ], '\u200C'),
+    openHarmonyProductDoc('RK3576 数据采集网关', 'terminal/rk3576-data-acquisition-gateway/README', [
+      { label: 'OpenHarmony 用户手册', id: 'openharmony/rk3576-data-acquisition-gateway/user-guide' },
+    ], '\u200C'),
+    openHarmonyProductDoc('RK3568 工业控制主板', 'main-board/rk3568-industrial-control-main-board/README', [
+      { label: 'OpenHarmony 用户手册', id: 'openharmony/rk3568-industrial-control-main-board/user-guide' },
+    ], '\u200C'),
+    openHarmonyProductDoc('RK3576 工业控制主板', 'main-board/rk3576-industrial-control-main-board/README', [
+      { label: 'OpenHarmony 用户手册', id: 'openharmony/rk3576-industrial-control-main-board/user-guide' },
+    ], '\u200C'),
+    openHarmonyProductDoc('8英寸平板', 'terminal/eight-inch-tablet/README', [], '\u200C'),
+    openHarmonyProductDoc('10.6英寸平板', 'terminal/ten-six-inch-tablet/README', [], '\u200C'),
+    openHarmonyProductDoc('11英寸平板', 'terminal/eleven-inch-tablet/README', [], '\u200C'),
+    openHarmonyProductDoc('RK3568 数据采集网关', 'terminal/rk3568-data-acquisition-gateway/README', [
+      { label: 'OpenHarmony 用户手册', id: 'openharmony/rk3568-data-acquisition-gateway/user-guide' },
+    ], '\u200C'),
+    openHarmonyProductDoc('RK3568 15.6英寸工控屏', 'terminal/rk3568-15-6-inch-panel/README', [
+      { label: 'OpenHarmony 用户手册', id: 'openharmony/rk3568-15-6-inch-panel/user-guide' },
+    ], '\u200C'),
+    openHarmonyProductDoc('RK3588 工业主板', 'main-board/rk3588-industrial-main-board/README', [], '\u200C'),
+    openHarmonyProductDoc('RK3576 商业显示主板', 'main-board/rk3576-commercial-display-main-board/README', [], '\u200C'),
+    openHarmonyProductDoc('工控屏', 'terminal/industrial-panel/README', [
+      { label: 'RK3588 OpenHarmony 用户手册', id: 'openharmony/industrial-panel/rk3588-user-guide' },
+    ], '\u200C'),
+    openHarmonyProductDoc('RK3588 主板', 'main-board/rk3588-main-board/README', [
+      { label: 'OpenHarmony 用户手册', id: 'openharmony/rk3588-main-board/user-guide' },
+    ], '\u200C'),
+    openHarmonyProductDoc('RK3588 边缘控制网关', 'terminal/rk3588-edge-control-gateway/README', [
+      { label: 'OpenHarmony 用户手册', id: 'openharmony/rk3588-edge-control-gateway/user-guide' },
+    ], '\u200C'),
+    openHarmonyProductDoc('拼接屏处理器', 'terminal/video-wall-processor/README', [], '\u200C'),
   ]),
   mineHarmony: existingDocsOnly([
     localizedProductSpecDoc('RK3568 主板', 'main-board/rk3568-main-board/README', '\u200D'),
@@ -139,7 +187,7 @@ const sidebars = {
     topCategory({
       label: 'OpenHarmony',
       section: 'openharmony',
-      items: sectionItems('openharmony', sharedProducts.openHarmony),
+      items: sharedProducts.openHarmony,
     }),
     topCategory({
       label: 'MineHarmony',
