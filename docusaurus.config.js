@@ -66,11 +66,47 @@ function applyReadmeCategoryLabels(items, docsById) {
   });
 }
 
+function filterHiddenSidebarItems(items, docsById) {
+  const isHiddenDoc = (id) =>
+    docsById.get(id)?.frontMatter?.hide_from_sidebar === true;
+
+  return items.flatMap((item) => {
+    if (item.type === 'doc') {
+      return isHiddenDoc(item.id) ? [] : [item];
+    }
+
+    if (item.type === 'link') {
+      return item.docId && isHiddenDoc(item.docId) ? [] : [item];
+    }
+
+    if (item.type !== 'category') {
+      return [item];
+    }
+
+    const filteredItems = filterHiddenSidebarItems(item.items, docsById);
+    const hasHiddenDocLink =
+      item.link?.type === 'doc' && isHiddenDoc(item.link.id);
+
+    if (hasHiddenDocLink && filteredItems.length === 0) {
+      return [];
+    }
+
+    if (hasHiddenDocLink) {
+      const itemWithoutLink = {...item, items: filteredItems};
+      delete itemWithoutLink.link;
+      return [itemWithoutLink];
+    }
+
+    return [{...item, items: filteredItems}];
+  });
+}
+
 async function localizedSidebarItemsGenerator(args) {
   const items = await args.defaultSidebarItemsGenerator(args);
   const docsById = new Map(args.docs.map((doc) => [doc.id, doc]));
   const labeledItems = applyReadmeCategoryLabels(items, docsById);
-  const filteredItems = removeTopLevelReadmeLinks(labeledItems);
+  const visibleItems = filterHiddenSidebarItems(labeledItems, docsById);
+  const filteredItems = removeTopLevelReadmeLinks(visibleItems);
 
   return isEnglishBuild() ? filterEnglishSidebarItems(filteredItems) : filteredItems;
 }
