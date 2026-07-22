@@ -21,7 +21,6 @@ export const ENGLISH_DOC_PATHS = [
   "mineharmony/README",
   "openharmony/README",
   "reference/README",
-  "reference/i18n-docs-guide",
   "terminal/README",
   "terminal/ai-edge-workstation/README",
   "terminal/bq8180-ai-mini-pc/README",
