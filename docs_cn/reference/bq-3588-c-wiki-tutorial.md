@@ -1,13 +1,13 @@
 ---
 sidebar_position: 5
 title: WiKi教程-BQ-3588-C
+split_by_h2: true
 ---
 
 # WiKi教程-BQ-3588-C
 
 ## 产品概况
 
-## 产品概况
 
 RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI 芯片的智能核心板， 该核心 板性能强劲、接口丰富，可以广泛应用于 ARM 电脑、AR/VR、智能座舱、智慧大屏、边缘计算、 高端 IPC、NVR、行业高端平板等应用场景。
 
@@ -17,7 +17,6 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 
 ## 产品优势
 
-## 产品优势
 
 1.搭载 RK3588 高性能 SOC，集成了四核 Cortex-A76 和四核 Cortex-A55，主频高达 2.4G
 
@@ -29,31 +28,26 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 
 ## 芯片架构
 
-## 芯片架构
 
 ![Chip_architecture](bq-3588-c-wiki-tutorial-assets/picture1.webp)
 
 ## 产品参数
 
-## 产品参数
 
 ![parameter](bq-3588-c-wiki-tutorial-assets/picture2.webp)
 
 ## 引线分配
 
-## 引线分配
 
 ![pin](bq-3588-c-wiki-tutorial-assets/picture3.webp)
 
 ## 规格参数
 
-## 规格参数
 
 ![specs1](bq-3588-c-wiki-tutorial-assets/picture4.webp)
 
 ## 引脚描述
 
-## 引脚描述
 
 ![pin1](bq-3588-c-wiki-tutorial-assets/picture5.webp)
 
@@ -65,13 +59,11 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 
 ## 底板接口信息
 
-## 底板接口信息
 
 ![port](bq-3588-c-wiki-tutorial-assets/picture9.webp)
 
 ## 底板产品参数
 
-## 底板产品参数
 
 ![baseboard](bq-3588-c-wiki-tutorial-assets/picture10.webp)
 
@@ -79,36 +71,33 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 
 ## 底板规格参数
 
-## 底板规格参数
 
 ![specs2](bq-3588-c-wiki-tutorial-assets/picture12.webp)
 
 ## 入门指南
 
-## 入门指南
 
-## 烧写固件
+### 烧写固件
 
-## 烧写固件
 
 一般采用Loader模式烧写固件，如果无法进入loader烧写模式，仍可以进入 MaskRom 模式来烧写固件。
 
-### 进入烧写模式
+#### 进入烧写模式
 
-### 准备程序
+#### 准备程序
 
 - RK3588开发板
 - 电脑主机
 - Type-C 数据线
 - 12v电源适配器
 
-#### 安装Windows RK USB驱动程序
+##### 安装Windows RK USB驱动程序
 
 先从网盘下载 [driverAssitant_v5.1.1.zip](https://pan.baidu.com/s/1ZPgDx9DucAG_rSReRePOCQ?pwd=1e5z#list/path=%2Fsharelink643277584-132554420893019%2F2.%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97Debian11_Ubuntu20.04%2F%E7%83%A7%E5%86%99%E5%B7%A5%E5%85%B7%E5%8F%8A%E9%A9%B1%E5%8A%A8&parentPath=%2Fsharelink643277584-132554420893019) 至电脑上，解压目录运行里面的 `DriverInstall.exe` 。先选择驱动卸载，然后再选择驱动安装。
 
 ![install](bq-3588-c-wiki-tutorial-assets/picture13.webp)
 
-#### 进入loader烧写模式
+##### 进入loader烧写模式
 
 1.接入12V电源适配器给予开发板供电，Type-C数据一端接在开发板上一端接到电脑PC端的USB接口上。
 
@@ -120,7 +109,7 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 
 ![loader](bq-3588-c-wiki-tutorial-assets/picture14.webp)
 
-#### 进入maskrom烧写模式
+##### 进入maskrom烧写模式
 
 1.接入12V电源适配器给予开发板供电，Type-C数据一端接在开发板上一端接到电脑PC端的USB接口上。
 
@@ -132,9 +121,9 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 
 ![maskrom](bq-3588-c-wiki-tutorial-assets/picture15.webp)
 
-### 查询烧写状态
+#### 查询烧写状态
 
-#### Linux主机查询
+##### Linux主机查询
 
 先从网盘下载得到
 [edge工具](https://pan.baidu.com/s/1ZPgDx9DucAG_rSReRePOCQ?pwd=1e5z#list/path=%2Fsharelink643277584-132554420893019%2F2.%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97Debian11_Ubuntu20.04%2F%E7%83%A7%E5%86%99%E5%B7%A5%E5%85%B7%E5%8F%8A%E9%A9%B1%E5%8A%A8%2Fedge%E5%B7%A5%E5%85%B7&parentPath=%2Fsharelink643277584-132554420893019) 至电脑上，执行如下命令查询烧写状态:
@@ -149,7 +138,7 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 
 3.maskrom：表示开发板进入maskrom烧写模式。
 
-#### Windows主机查询
+##### Windows主机查询
 
 下载网盘 [RKDevTool_Release_v2.84](https://pan.baidu.com/s/1ZPgDx9DucAG_rSReRePOCQ?pwd=1e5z#list/path=%2Fsharelink643277584-132554420893019%2F2.%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97Debian11_Ubuntu20.04%2F%E7%83%A7%E5%86%99%E5%B7%A5%E5%85%B7%E5%8F%8A%E9%A9%B1%E5%8A%A8%2FFlashTool&parentPath=%2Fsharelink643277584-132554420893019) 工具至电脑上。双击打开RKDevTool_Release_v2.84目录下的 `RKDevTool.exe`
 
@@ -166,9 +155,9 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 ![find_maskrom](bq-3588-c-wiki-tutorial-assets/picture18.webp)
 图1-6：发现一个MASKROM设备
 
-### Linux主机烧写镜像
+#### Linux主机烧写镜像
 
-#### 烧写所有镜像
+##### 烧写所有镜像
 
 烧写所有镜像包括： `MiniLoaderAll.bin` ， `parameter.txt` ， `uboot.img` ， `misc.img` ， `boot_linux.img` ， `recovery.img` ， `resource.img` 和 `rootfs.img`
 
@@ -176,7 +165,7 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 ./edge flash -a
 ```
 
-#### 烧写uboot镜像
+##### 烧写uboot镜像
 
 烧写镜像：MiniLoaderAll.bin，uboot.img
 
@@ -184,7 +173,7 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 ./edge flash -u
 ```
 
-#### 烧写kernel镜像
+##### 烧写kernel镜像
 
 烧写镜像：resource.img，boot_linux.img和recovery.img
 
@@ -192,7 +181,7 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 ./edge flash -k
 ```
 
-#### 烧写misc镜像
+##### 烧写misc镜像
 
 烧写镜像：misc.img
 
@@ -200,7 +189,7 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 ./edge flash -m
 ```
 
-#### 烧写文件系统镜像
+##### 烧写文件系统镜像
 
 烧写镜像：rootfs.img
 
@@ -208,7 +197,7 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 ./edge flash -r
 ```
 
-#### 查看烧写帮助
+##### 查看烧写帮助
 
 查看支持的烧写参数：
 
@@ -216,13 +205,13 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 ./edge flash -h
 ```
 
-### Windows主机烧写镜像
+#### Windows主机烧写镜像
 
 - 双击打开RKDevTool_Release_v2.84目录下的RKDevTool.exe。
 - 确认开发板已经进入loader或者maskrom烧写模式。
 - 打勾选择需要烧写的镜像。
 
-##### 注解
+###### 注解
 
 Loader和Parmeter选项建议打勾选择，其他选项根据需要打勾选择。
 
@@ -230,41 +219,37 @@ Loader和Parmeter选项建议打勾选择，其他选项根据需要打勾选择
 
 ## Linux开发
 
-## Linux开发
 
-## 开机登录账户
+### 开机登录账户
 
-## 开机登录账户
 
 Debian11默认的登录账号是：bearkey，登录密码是：bearkey
 
-## 远程登录调试
+### 远程登录调试
 
-## 远程登录调试
 
 RK3588开发板出厂debian11固件默认支持两种远程登录：adb和ssh
 
-### adb登录
+#### adb登录
 
 Linux电脑主机通过USB（主机的USB Host连接开发板的USB OTG口）
 
 执行命令adb shell指令即可登录RK3588开发板的debian系统中。
 
-##### 提示
+###### 提示
 
 *开发板的OTG口通常是标有”TYPE_C” 或”DOWNLOAD”的丝印，接口类似是Type-C。*
 
-### ssh登录
+#### ssh登录
 
 Linux电脑主机通过网络，执行如下命令远程(ip获取方法)登录RK3588开发板的debian系统：
 
 `ssh bearkey@xxx.xxx.xxx.xxx               //xxx.xxx.xxx.xxx是开发板的IP地址`
 
-## 常用命令行操作
+### 常用命令行操作
 
-## 常用命令行操作
 
-### 网络连接
+#### 网络连接
 
 插入网线。
 
@@ -280,15 +265,15 @@ ip a
 dhclient eth1
 ```
 
-### 挂载U盘
+#### 挂载U盘
 
 `mount /dev/sda1 /mnt   //假设U盘为：/dev/sda1`
 
-### 远程拷贝
+#### 远程拷贝
 
 `scp $LOCAL_FILE $USER@$IP:/$REMOTE_PATH`
 
-### 重要文件备份
+#### 重要文件备份
 
 挂载rootfs分区到/sysroot目录：进入紧急模式后系统自动挂载rootfs分区到/sysroot，用户无需重复操作。
 
@@ -299,7 +284,7 @@ cp $FILE /mnt/
 scp $LOCAL_FILE $USER@$IP:/$REMOTE_PATH
 ```
 
-### 系统还原
+#### 系统还原
 
 1、将待还原的镜像rootfs.img拷贝到U盘上，并将U盘挂载到/mnt目录。
 
@@ -315,7 +300,7 @@ umount /sysroot
 dd if=/mnt/rootfs.img of=/dev/disk/by-partlabel/rootfs
 ```
 
-### 紧急模式
+#### 紧急模式
 
 该模式在用户异常行为破坏系统文件时，导致系统无法正常启动时使用。非必要使用此模式。
 
@@ -323,13 +308,12 @@ dd if=/mnt/rootfs.img of=/dev/disk/by-partlabel/rootfs
 
 ![urgency](bq-3588-c-wiki-tutorial-assets/picture20.webp)
 
-## 制作客制化Debian11固件
+### 制作客制化Debian11固件
 
-## 制作客制化Debian11固件
 
 当用户在RK3588开发板完成产品化软件部署后，可以按照本章节自主裁剪debian11固件，生产自定义rootfs.img，用于产品批量生产。
 
-### 制作根文件系统
+#### 制作根文件系统
 
 以下操作均直接在RK3588开发板执行，如下步骤制作根文件系统：
 
@@ -379,7 +363,6 @@ umount /mnt
 
 ## 系统软件包
 
-## 系统软件包
 
 BQ-3588-C预装的debian11内预置了以下常用到的各种软件包
 
@@ -859,7 +842,6 @@ CFLAG=`pkg-config --cflags rockchip_rga`
 
 ## 特色软件包
 
-## 特色软件包
 
 ### Docker软件包
 
@@ -1186,7 +1168,6 @@ import toybrick as toy
 
 ## 安卓开发
 
-## 安卓开发
 
 #### TODO
 
@@ -1218,7 +1199,6 @@ import toybrick as toy
 
 ## RKNN开发
 
-## RKNN开发
 
 ### rknn-toolkit2
 

@@ -336,6 +336,130 @@
       "href": "RK3588_Carrier_board/03"
     }
   ],
+  "reference/bq-3588-c-wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "产品概况",
+      "href": "bq-3588-c-wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "产品优势",
+      "href": "bq-3588-c-wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "芯片架构",
+      "href": "bq-3588-c-wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "产品参数",
+      "href": "bq-3588-c-wiki-tutorial/04"
+    },
+    {
+      "type": "link",
+      "label": "引线分配",
+      "href": "bq-3588-c-wiki-tutorial/05"
+    },
+    {
+      "type": "link",
+      "label": "规格参数",
+      "href": "bq-3588-c-wiki-tutorial/06"
+    },
+    {
+      "type": "link",
+      "label": "引脚描述",
+      "href": "bq-3588-c-wiki-tutorial/07"
+    },
+    {
+      "type": "link",
+      "label": "底板接口信息",
+      "href": "bq-3588-c-wiki-tutorial/08"
+    },
+    {
+      "type": "link",
+      "label": "底板产品参数",
+      "href": "bq-3588-c-wiki-tutorial/09"
+    },
+    {
+      "type": "link",
+      "label": "底板规格参数",
+      "href": "bq-3588-c-wiki-tutorial/10"
+    },
+    {
+      "type": "link",
+      "label": "入门指南",
+      "href": "bq-3588-c-wiki-tutorial/11"
+    },
+    {
+      "type": "link",
+      "label": "Linux开发",
+      "href": "bq-3588-c-wiki-tutorial/12"
+    },
+    {
+      "type": "link",
+      "label": "系统软件包",
+      "href": "bq-3588-c-wiki-tutorial/13"
+    },
+    {
+      "type": "link",
+      "label": "特色软件包",
+      "href": "bq-3588-c-wiki-tutorial/14"
+    },
+    {
+      "type": "link",
+      "label": "安卓开发",
+      "href": "bq-3588-c-wiki-tutorial/15"
+    },
+    {
+      "type": "link",
+      "label": "RKNN开发",
+      "href": "bq-3588-c-wiki-tutorial/16"
+    }
+  ],
+  "reference/tb-96ai-wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "产品规格",
+      "href": "tb-96ai-wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "入门指南",
+      "href": "tb-96ai-wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "内核驱动",
+      "href": "tb-96ai-wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "Linux-Fedora开发",
+      "href": "tb-96ai-wiki-tutorial/04"
+    },
+    {
+      "type": "link",
+      "label": "Linux-Debian10开发",
+      "href": "tb-96ai-wiki-tutorial/05"
+    },
+    {
+      "type": "link",
+      "label": "Android开发",
+      "href": "tb-96ai-wiki-tutorial/06"
+    },
+    {
+      "type": "link",
+      "label": "安装 JDK",
+      "href": "tb-96ai-wiki-tutorial/07"
+    },
+    {
+      "type": "link",
+      "label": "人工智能",
+      "href": "tb-96ai-wiki-tutorial/08"
+    }
+  ],
   "terminal/bq8180-ai-mini-pc/wiki-tutorial": [
     {
       "type": "link",
