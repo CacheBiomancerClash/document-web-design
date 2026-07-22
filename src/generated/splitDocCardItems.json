@@ -203,7 +203,7 @@
   "openharmony/rk3568-data-acquisition-gateway/RK3568_Data_Acqusition_GateWay": [
     {
       "type": "link",
-      "label": "第一章 <font face=\"微软雅黑\">RK3568</font>数据采集网关",
+      "label": "第一章 RK3568数据采集网关",
       "href": "RK3568_Data_Acqusition_GateWay/01"
     },
     {
@@ -213,7 +213,7 @@
     },
     {
       "type": "link",
-      "label": "第三章 <font face=\"微软雅黑\">RK3576</font> 平台界面功能使用及测试",
+      "label": "第三章 RK3576 平台界面功能使用及测试",
       "href": "RK3568_Data_Acqusition_GateWay/03"
     }
   ],
