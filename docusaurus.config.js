@@ -43,9 +43,34 @@ function filterEnglishSidebarItems(items) {
   });
 }
 
+function applyReadmeCategoryLabels(items, docsById) {
+  return items.map((item) => {
+    if (item.type !== 'category') {
+      return item;
+    }
+
+    const nestedItems = applyReadmeCategoryLabels(item.items, docsById);
+    const readmeId =
+      item.link?.type === 'doc' && item.link.id.endsWith('/README')
+        ? item.link.id
+        : item.items.find(
+            (child) => child.type === 'doc' && child.id.endsWith('/README'),
+          )?.id;
+    const readmeLabel = docsById.get(readmeId)?.frontMatter?.sidebar_label;
+
+    return {
+      ...item,
+      ...(readmeLabel ? {label: readmeLabel} : {}),
+      items: nestedItems,
+    };
+  });
+}
+
 async function localizedSidebarItemsGenerator(args) {
   const items = await args.defaultSidebarItemsGenerator(args);
-  const filteredItems = removeTopLevelReadmeLinks(items);
+  const docsById = new Map(args.docs.map((doc) => [doc.id, doc]));
+  const labeledItems = applyReadmeCategoryLabels(items, docsById);
+  const filteredItems = removeTopLevelReadmeLinks(labeledItems);
 
   return isEnglishBuild() ? filterEnglishSidebarItems(filteredItems) : filteredItems;
 }
@@ -224,11 +249,19 @@ const productNavGroupLinks = {
 const withSidebarContext = (to, section) =>
   section ? `${to}?section=${section}` : to;
 
+const getSectionProductLink = (productLink, section) =>
+  section
+    ? productLink.replace(/^\/docs\/[^/]+/, `/docs/${section}`)
+    : productLink;
+
 const getProductNavbarItem = (label, section) =>
   productDocLinks[label]
     ? {
         label,
-        to: withSidebarContext(productDocLinks[label], section),
+        to: withSidebarContext(
+          getSectionProductLink(productDocLinks[label], section),
+          section,
+        ),
         ...(label === 'RK3588 核心板'
           ? {activeBaseRegex: '^/docs/core-board/rk3588-core-board/?'}
           : {}),

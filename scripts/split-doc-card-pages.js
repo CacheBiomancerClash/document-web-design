@@ -180,16 +180,18 @@ function splitBodyByH2(body) {
 }
 
 function rewriteRelativeLinks(content) {
-  return content.replace(/(!?\[[^\]]*]\()([^)\s]+)([^)]*\))/g, (match, open, url, close) => {
-    if (
-      /^(?:[a-z][a-z0-9+.-]*:|#|\/)/i.test(url) ||
-      url.startsWith('../')
-    ) {
-      return match;
-    }
+  const shiftRelativeUrl = (url) =>
+    /^(?:[a-z][a-z0-9+.-]*:|#|\/)/i.test(url) ? url : `../${url}`;
 
-    return `${open}../${url}${close}`;
-  });
+  return content
+    .replace(
+      /(!?\[[^\]]*]\()([^)\s]+)([^)]*\))/g,
+      (match, open, url, close) => `${open}${shiftRelativeUrl(url)}${close}`,
+    )
+    .replace(
+      /(<[^>]+\s(?:src|href)=["'])([^"']+)(["'])/gi,
+      (match, open, url, close) => `${open}${shiftRelativeUrl(url)}${close}`,
+    );
 }
 
 function removeGeneratedOutput(outputDir) {
