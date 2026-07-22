@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 split_by_h2: true
-slug: /_split-source/terminal/rk3576-commercial-display-main-board/wiki-tutorial
+slug: /_split-source/main-board/rk3576-industrial-control-main-board/wiki-tutorial-linux
 unlisted: true
 sidebar_label: Wiki 教程
 title: RK3576 工业控制主板 Wiki 教程
