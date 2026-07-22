@@ -156,6 +156,23 @@
       "href": "wiki-tutorial/05"
     }
   ],
+  "main-board/rk3576-commercial-display-main-board/wiki-tutorial-linux": [
+    {
+      "type": "link",
+      "label": "一、 设备详情",
+      "href": "wiki-tutorial-linux/01"
+    },
+    {
+      "type": "link",
+      "label": "二、固件烧写",
+      "href": "wiki-tutorial-linux/02"
+    },
+    {
+      "type": "link",
+      "label": "三、设备例程",
+      "href": "wiki-tutorial-linux/03"
+    }
+  ],
   "main-board/robo3588-robot-main-board/wiki-tutorial": [
     {
       "type": "link",
@@ -181,6 +198,18 @@
       "type": "link",
       "label": "五、编译调试",
       "href": "wiki-tutorial/05"
+    }
+  ],
+  "main-board/robo3588-robot-main-board/wiki-tutorial-linux": [
+    {
+      "type": "link",
+      "label": "一、贝启Robo3588机器人开发板主板拓展RK1828计算卡",
+      "href": "wiki-tutorial-linux/01"
+    },
+    {
+      "type": "link",
+      "label": "二、设备相关例程",
+      "href": "wiki-tutorial-linux/02"
     }
   ],
   "openharmony/rk3568-15-6-inch-panel/RK3568_Industrial_board_15.6_inch": [
@@ -460,6 +489,28 @@
       "href": "tb-96ai-wiki-tutorial/08"
     }
   ],
+  "terminal/ai-edge-workstation/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "一、 设备详情",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "二、设备基本参数",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "三、设备管理",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "四、设备相关例程",
+      "href": "wiki-tutorial/04"
+    }
+  ],
   "terminal/bq8180-ai-mini-pc/wiki-tutorial": [
     {
       "type": "link",
@@ -498,6 +549,45 @@
     }
   ],
   "terminal/rk3506-industrial-panel/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "1. 硬件清单",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "2. PC环境配置",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "3. 固件烧录",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "4. 基础功能验证",
+      "href": "wiki-tutorial/04"
+    }
+  ],
+  "terminal/rk3576-data-acquisition-gateway/wiki-tutorial-linux": [
+    {
+      "type": "link",
+      "label": "一、 设备详情",
+      "href": "wiki-tutorial-linux/01"
+    },
+    {
+      "type": "link",
+      "label": "二、固件烧写",
+      "href": "wiki-tutorial-linux/02"
+    },
+    {
+      "type": "link",
+      "label": "三、设备例程",
+      "href": "wiki-tutorial-linux/03"
+    }
+  ],
+  "terminal/Robo3588-Robot-Mainboard/wiki-tutorial": [
     {
       "type": "link",
       "label": "1. 硬件清单",
