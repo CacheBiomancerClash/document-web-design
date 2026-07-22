@@ -3,8 +3,8 @@ sidebar_position: 2
 split_by_h2: true
 slug: /_split-source/main-board/robo3588-robot-main-board/wiki-tutorial
 unlisted: true
-sidebar_label: Wiki 教程
-title: Robo3588机器人主板 Wiki 教程
+sidebar_label: OpenHarmony 系统 Wiki 教程
+title: Robo3588机器人主板 OpenHarmony 系统 Wiki 教程
 ---
 
 # 贝启Robo3588机器人开发板主板
