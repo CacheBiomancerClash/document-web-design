@@ -53,7 +53,7 @@ RK3588 目前支持 **OTG 烧写方式**。用户资料中提供了相应的烧�
 
 ---
 
-<img src="images/image-20260708093317617.png" alt="image-20260708093317617" style={{ zoom: '67%' }} />
+![image-20260708093317617](images/image-20260708093317617.png)
 
 ### 2.2 烧录操作：烧写固件到设备
 
@@ -88,27 +88,27 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 3. 清空工具所有项
 
-   <img src="images/image-20260708095206351.png" alt="image-20260708095206351" style={{ zoom: '67%' }} />
+   ![image-20260708095206351](images/image-20260708095206351.png)
 
 4. 清空完成后，点击 **导入配置**；
 
-   <img src="images/image-20260708095250342.png" alt="image-20260708095250342" style={{ zoom: '67%' }} />
+   ![image-20260708095250342](images/image-20260708095250342.png)
 
 5. 选择镜像目录下的 `config.cfg` 文件；
 
-   <img src="images/image-20260708095328768.png" alt="image-20260708095328768" style={{ zoom: '67%' }} />
+   ![image-20260708095328768](images/image-20260708095328768.png)
 
-   <img src="images/image-20260708095354613.png" alt="image-20260708095354613" style={{ zoom: '67%' }} />
+   ![image-20260708095354613](images/image-20260708095354613.png)
 
 6. 依次选择工具所勾选的镜像文件；
 
-   <img src="images/image-20260708095434815.png" alt="image-20260708095434815" style={{ zoom: '67%' }} />
+   ![image-20260708095434815](images/image-20260708095434815.png)
 
-   <img src="images/image-20260708095442188.png" alt="image-20260708095442188" style={{ zoom: '67%' }} />
+   ![image-20260708095442188](images/image-20260708095442188.png)
 
 7. 点击 **执行** 按钮开始升级。
 
-   <img src="images/image-20260708095628639.png" alt="image-20260708095628639" style={{ zoom: '67%' }} />
+   ![image-20260708095628639](images/image-20260708095628639.png)
 
 等待工具左侧显示烧录完成即可。
 
@@ -129,7 +129,7 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 开发板启动桌面显示如下：
 
-<img src="images/image-20260708101601583.png" alt="image-20260708101601583" style={{ zoom: '67%' }} />
+![image-20260708101601583](images/image-20260708101601583.png)
 
 ---
 
@@ -256,21 +256,21 @@ hardware=rk3588
 
 串口硬件接口介绍：
 
-<img src="images/image-20260708103337866.png" alt="image-20260708103337866" style={{ zoom: '67%' }} />
+![image-20260708103337866](images/image-20260708103337866.png)
 
 测试工具介绍：
 
 1. 485串口测试工具
 
-   <img src="images/image-20260708103711507.png" alt="image-20260708103711507" style={{ zoom: '33%' }} />
+   ![image-20260708103711507](images/image-20260708103711507.png)
 
 2. 232串口测试工具
 
-   <img src="images/image-20260708103725334.png" alt="image-20260708103725334" style={{ zoom: '33%' }} />
+   ![image-20260708103725334](images/image-20260708103725334.png)
 
 3. PC端串口助手
 
-   <img src="images/image-20260708103917216.png" alt="image-20260708103917216" style={{ zoom: '33%' }} />
+   ![image-20260708103917216](images/image-20260708103917216.png)
 
    > 注意：测试工具不限，本例测试以如图所示工具进行测试，实际使用其他工具均可。
 
@@ -402,7 +402,7 @@ microcom -s 115200 /dev/ttyS0
 
 如图所示：
 
-<img src="images/image-20260708110657942.png" alt="image-20260708110657942" style={{ zoom: '67%' }} />
+![image-20260708110657942](images/image-20260708110657942.png)
 
 ---
 
@@ -432,7 +432,7 @@ USB 端口可连接以下设备进行测试：
 
 1. 确认蓝牙天线已正确连接；
 
-   <img src="images/image-20260708110932997.png" alt="image-20260708110932997" style={{ zoom: '67%' }} />
+   ![image-20260708110932997](images/image-20260708110932997.png)
 
 2. 打开系统 **设置**；
 
@@ -448,7 +448,7 @@ USB 端口可连接以下设备进行测试：
 
 8. 确认连接成功。
 
-   <img src="images/image-20260708111007781.png" alt="image-20260708111007781" style={{ zoom: '67%' }} />
+   ![image-20260708111007781](images/image-20260708111007781.png)
 
 测试判断：
 
@@ -467,7 +467,7 @@ USB 端口可连接以下设备进行测试：
 
 2. 插入耳机；
 
-   <img src="images/image-20260708111238159.png" alt="image-20260708111238159" style={{ zoom: '67%' }} />
+   ![image-20260708111238159](images/image-20260708111238159.png)
 
 3. 打开桌面音乐播放器；
 
@@ -490,11 +490,11 @@ USB 端口可连接以下设备进行测试：
 
 2. 按下 `音量 -` 按键；
 
-   <img src="images/image-20260708111400425.png" alt="image-20260708111400425" style={{ zoom: '67%' }} />
+   ![image-20260708111400425](images/image-20260708111400425.png)
 
 3. 查看桌面音量状态是否有更新；
 
-   <img src="images/image-20260708111513722.png" alt="image-20260708111513722" style={{ zoom: '67%' }} />
+   ![image-20260708111513722](images/image-20260708111513722.png)
 
 4. 确认系统音量条是否正常显示并变化。
 
@@ -513,7 +513,7 @@ USB 端口可连接以下设备进行测试：
 
 2. 确认排线方向和接口连接正确；
 
-   <img src="images/image-20260708111533629.png" alt="image-20260708111533629" style={{ zoom: '67%' }} />
+   ![image-20260708111533629](images/image-20260708111533629.png)
 
 3. 打开系统相机 HAP；
 
