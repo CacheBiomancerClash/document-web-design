@@ -15,6 +15,8 @@
   "openharmony/rk3588-edge-control-gateway/RK3588_Data_Acqusition_GateWay",
   "openharmony/rk3588-industrial-main-board/RK3588_Industrial_Panel_V03",
   "openharmony/rk3588-main-board/RK3588_Carrier_board",
+  "reference/bq-3588-c-wiki-tutorial",
+  "reference/tb-96ai-wiki-tutorial",
   "terminal/bq8180-ai-mini-pc/wiki-tutorial",
   "terminal/rk3506-industrial-panel/wiki-tutorial",
   "terminal/ten-six-inch-tablet/wiki-tutorial"

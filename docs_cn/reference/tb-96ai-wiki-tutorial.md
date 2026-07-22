@@ -1,13 +1,13 @@
 ---
 sidebar_position: 7
 title: WiKi教程-TB-96AI
+split_by_h2: true
 ---
 
 # WiKi教程-TB-96AI
 
 ## 产品规格
 
-## 产品规格
 
 ### 产品介绍
 
@@ -35,7 +35,6 @@ TB-96AI搭配由Bearkey研发的96Boards CarrierBoard可以组成一套完整的
 
 ## 入门指南
 
-## 入门指南
 
 ### 固件下载
 
@@ -249,7 +248,6 @@ fedora系统登录用户名：toybrick，密码：toybrick
 
 ## 内核驱动
 
-## 内核驱动
 
 ### 内核编译
 
@@ -1373,7 +1371,6 @@ lspci可以看到系统检测到的pcie设备：
 
 ## Linux-Fedora开发
 
-## Linux-Fedora开发
 
 ### RPM包安装升级
 
@@ -1822,7 +1819,6 @@ client.disable();
 
 ## Linux-Debian10开发
 
-## Linux-Debian10开发
 
 ### Toybrick Debian 10用户指南
 
@@ -2329,7 +2325,6 @@ client.disable();
 
 ## Android开发
 
-## Android开发
 
 ### ADB使用
 
@@ -2878,7 +2873,6 @@ bundled_uninstall_back-app
 
 ## 人工智能
 
-## 人工智能
 
 ### 模型转换
 
