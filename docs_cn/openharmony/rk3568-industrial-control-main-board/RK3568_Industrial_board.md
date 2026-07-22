@@ -53,7 +53,7 @@ RK3568 目前支持 **OTG 烧写方式**。用户资料中提供了相应的烧�
 
 ---
 
-<img src="../images/image-20260708093317617.png" alt="image-20260708093317617" style={{ zoom: '67%' }} />
+<img src="images/image-20260708093317617.png" alt="image-20260708093317617" style={{ zoom: '67%' }} />
 
 ### 2.2 烧录操作：烧写固件到设备
 
@@ -74,15 +74,15 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
    > 注意：下图所示，选中的有上下两个USB口，烧录固件时请连接 **底部** 的 USB OTG 接口。
 
-   <img src="../images/image-20260708161029660.png" alt="image-20260708161029660" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708161029660.png" alt="image-20260708161029660" style={{ zoom: '67%' }} />
 
 3. 按住开发板上的 `recovery` 键不要松开；
 
-   <img src="../images/image-20260708161531529.png" alt="image-20260708161531529" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708161531529.png" alt="image-20260708161531529" style={{ zoom: '67%' }} />
 
 4. 按一下 `reset` 键，使系统复位；
 
-   <img src="../images/image-20260708161606616.png" alt="image-20260708161606616" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708161606616.png" alt="image-20260708161606616" style={{ zoom: '67%' }} />
 
 5. RKDevTool 工具上会提示发现 `LOADER` 设备或 `MASKROM` 设备，再松开 `	recovery`按键。
 
@@ -98,27 +98,27 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 3. 清空工具所有项
 
-   <img src="../images/image-20260708095206351.png" alt="image-20260708095206351" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708095206351.png" alt="image-20260708095206351" style={{ zoom: '67%' }} />
 
 4. 清空完成后，点击 **导入配置**；
 
-   <img src="../images/image-20260708095250342.png" alt="image-20260708095250342" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708095250342.png" alt="image-20260708095250342" style={{ zoom: '67%' }} />
 
 5. 选择镜像目录下的 `config.cfg` 文件；
 
-   <img src="../images/image-20260708095328768.png" alt="image-20260708095328768" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708095328768.png" alt="image-20260708095328768" style={{ zoom: '67%' }} />
 
-   <img src="../images/image-20260708095354613.png" alt="image-20260708095354613" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708095354613.png" alt="image-20260708095354613" style={{ zoom: '67%' }} />
 
 6. 依次选择工具所勾选的镜像文件；
 
-   <img src="../images/image-20260708095434815.png" alt="image-20260708095434815" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708095434815.png" alt="image-20260708095434815" style={{ zoom: '67%' }} />
 
-   <img src="../images/image-20260708095442188.png" alt="image-20260708095442188" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708095442188.png" alt="image-20260708095442188" style={{ zoom: '67%' }} />
 
 7. 点击 **执行** 按钮开始升级。
 
-   <img src="../images/image-20260708095628639.png" alt="image-20260708095628639" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708095628639.png" alt="image-20260708095628639" style={{ zoom: '67%' }} />
 
 等待工具左侧显示烧录完成即可。
 
@@ -139,7 +139,7 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 开发板启动桌面显示如下：
 
-<img src="../images/image-20260708161945885.png" alt="image-20260708161945885" style={{ zoom: '50%' }} />
+<img src="images/image-20260708161945885.png" alt="image-20260708161945885" style={{ zoom: '50%' }} />
 
 ---
 
@@ -161,7 +161,7 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 6. 输入密码并点击连接；
 
-   ![image-20260708101839238](../images/image-20260708101839238.webp)
+   ![image-20260708101839238](images/image-20260708101839238.webp)
 
 7. 连接成功后，打开命令行窗口hdc shell 进入Openharmony系统后，进入系统后可使用如下命令查看网络信息：
 
@@ -266,7 +266,7 @@ hardware=rk3588
 
 串口硬件接口介绍：
 
-<img src="../images/image-20260708162535161.png" alt="image-20260708162535161" style={{ zoom: '67%' }} />
+<img src="images/image-20260708162535161.png" alt="image-20260708162535161" style={{ zoom: '67%' }} />
 
 
 
@@ -274,15 +274,15 @@ hardware=rk3588
 
 1. 485串口测试工具
 
-   <img src="../images/image-20260708103711507.png" alt="image-20260708103711507" style={{ zoom: '33%' }} />
+   <img src="images/image-20260708103711507.png" alt="image-20260708103711507" style={{ zoom: '33%' }} />
 
 2. 232串口测试工具
 
-   <img src="../images/image-20260708103725334.png" alt="image-20260708103725334" style={{ zoom: '33%' }} />
+   <img src="images/image-20260708103725334.png" alt="image-20260708103725334" style={{ zoom: '33%' }} />
 
 3. PC端串口助手
 
-   <img src="../images/image-20260708103917216.png" alt="image-20260708103917216" style={{ zoom: '33%' }} />
+   <img src="images/image-20260708103917216.png" alt="image-20260708103917216" style={{ zoom: '33%' }} />
 
    > 注意：测试工具不限，本例测试以如图所示工具进行测试，实际使用其他工具均可。
 
@@ -311,7 +311,7 @@ microcom -s 115200 /dev/ttyS3
 
 测试结果：
 
-![image-20260708104908522](../images/image-20260708104908522.webp)
+![image-20260708104908522](images/image-20260708104908522.webp)
 
 ---
 
@@ -335,7 +335,7 @@ microcom -s 115200 /dev/ttyS3
 
 测试结果：
 
-![image-20260708151126012](../images/image-20260708151126012.webp)
+![image-20260708151126012](images/image-20260708151126012.webp)
 
 > 说明：UART4 测试步骤一致，按照操作示例即可。
 
@@ -371,7 +371,7 @@ microcom -s 115200 /dev/ttyS3
 
 测试结果：
 
-![image-20260708105717222](../images/image-20260708105717222.webp)
+![image-20260708105717222](images/image-20260708105717222.webp)
 
 ---
 
@@ -395,7 +395,7 @@ microcom -s 115200 /dev/ttyS3
 
 测试结果：
 
-![image-20260708151226986](../images/image-20260708151226986.webp)
+![image-20260708151226986](images/image-20260708151226986.webp)
 
 > 说明：UART9测试步骤一致，按照操作示例即可。
 
@@ -416,7 +416,7 @@ microcom -s 115200 /dev/ttyS3
 
 如图所示：
 
-<img src="../images/image-20260708110657942.png" alt="image-20260708110657942" style={{ zoom: '67%' }} />
+<img src="images/image-20260708110657942.png" alt="image-20260708110657942" style={{ zoom: '67%' }} />
 
 ---
 
@@ -446,7 +446,7 @@ USB 端口可连接以下设备进行测试：
 
 1. 确认蓝牙天线已正确连接；
 
-   <img src="../images/image-20260708163011306.png" alt="image-20260708163011306" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708163011306.png" alt="image-20260708163011306" style={{ zoom: '67%' }} />
 
 2. 打开系统 **设置**；
 
@@ -462,7 +462,7 @@ USB 端口可连接以下设备进行测试：
 
 8. 确认连接成功。
 
-   <img src="../images/image-20260708151407630.png" alt="image-20260708151407630" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708151407630.png" alt="image-20260708151407630" style={{ zoom: '67%' }} />
 
 测试判断：
 
@@ -481,11 +481,11 @@ USB 端口可连接以下设备进行测试：
 
 2. 插入耳机；
 
-   <img src="../images/image-20260708163102238.png" alt="image-20260708163102238" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708163102238.png" alt="image-20260708163102238" style={{ zoom: '67%' }} />
 
 3. 打开系统桌面的音乐播放器；
 
-   <img src="../images/image-20260708151839680.png" alt="image-20260708151839680" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708151839680.png" alt="image-20260708151839680" style={{ zoom: '67%' }} />
 
 4. 点击播放音乐；
 
@@ -506,7 +506,7 @@ USB 端口可连接以下设备进行测试：
 
 2. 确认排线方向和接口连接正确；
 
-   <img src="../images/image-20260708163724803.png" alt="image-20260708163724803" style={{ zoom: '67%' }} />
+   <img src="images/image-20260708163724803.png" alt="image-20260708163724803" style={{ zoom: '67%' }} />
 
 3. 打开系统相机 HAP；
 
