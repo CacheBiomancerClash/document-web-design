@@ -143,6 +143,10 @@ function collectSplitSources(docsRoot) {
   return sources;
 }
 
+function normalizeHeadingText(value) {
+  return value.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+}
+
 function splitBodyByH2(body) {
   const lines = body.split(/\r?\n/);
   const firstH1 = lines.find((line) => /^#\s+/.test(line));
@@ -158,7 +162,7 @@ function splitBodyByH2(body) {
       }
 
       current = {
-        title: heading[1].trim(),
+        title: normalizeHeadingText(heading[1]),
         lines: [],
       };
       continue;
@@ -174,7 +178,9 @@ function splitBodyByH2(body) {
   }
 
   return {
-    parentTitle: firstH1 ? firstH1.replace(/^#\s+/, '').trim() : undefined,
+    parentTitle: firstH1
+      ? normalizeHeadingText(firstH1.replace(/^#\s+/, ''))
+      : undefined,
     sections,
   };
 }
