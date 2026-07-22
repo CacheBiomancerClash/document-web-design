@@ -13,7 +13,7 @@ title: Robo3588机器人主板 Linux 系统 Wiki 教程
 
 **1、   贝启Robo3588机器人开发板主板拓展RK1828计算卡**
 
-![image-20260703161254751](./wiki-tutorial-linux-assets/image-20260703161254751.png)
+![image-20260703161254751](./wiki-tutorial-linux-assets/image-20260703161254751.webp)
 
 ​																					图1 贝启Robo3588机器人开发板主板拓展RK1828计算卡
 
@@ -59,7 +59,7 @@ tar zxvf rknn3-Qwen2.5-demo.tar.gz
 注：最后一个参数 "prompt" 为大模型的输入，可以是 "who are u" 等其他 “prompt”
 ```
 
-![image-20260428191401934](./wiki-tutorial-linux-assets/image-20260428191401934.png)
+![image-20260428191401934](./wiki-tutorial-linux-assets/image-20260428191401934.webp)
 
 demo 运行时，可使用如下命令查看 rk1828 温度、cpu 使用率、npu 使用率等信息
 
@@ -115,9 +115,9 @@ gcc -o demo/rkalg_idc_lut_demo demo/src/rkalg_idc_lut_demo.cpp -Iinclude  Llib/g
 
 测试结果如下
 
-![image-20260707172103931](./wiki-tutorial-linux-assets/image-20260707172103931.png)
+![image-20260707172103931](./wiki-tutorial-linux-assets/image-20260707172103931.webp)
 
-![image-20260707172115063](./wiki-tutorial-linux-assets/image-20260707172115063.png)
+![image-20260707172115063](./wiki-tutorial-linux-assets/image-20260707172115063.webp)
 
 #### b）PCL demo
 
@@ -127,7 +127,7 @@ demo 编译运行步骤如下
 
 -   修改工具链，使用板子自带的 gcc 和 g+
 
-![image-20260707172324217](./wiki-tutorial-linux-assets/image-20260707172324217.png)
+![image-20260707172324217](./wiki-tutorial-linux-assets/image-20260707172324217.webp)
 
 -   最后在源码根目录执行
 

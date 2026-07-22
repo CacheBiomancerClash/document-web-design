@@ -29,29 +29,29 @@ title: Robo3588 机器人主板 Wiki 教程
 
 hdc的工具在bin目录下，打开系统设置环境变量到该目录即可使用hdc工具。
 
-![image-20260703153900640](./images/image-1.png)
+![image-20260703153900640](./images/image-1.webp)
 
 ### 	2.2 RockChip烧录驱动安装
 
-![image-20260703145838332](./images/image-20260703154041402.png)
+![image-20260703145838332](./images/image-20260703154041402.webp)
 
-![image-20260703154138678](images/image-20260703154138678.png)
+![image-20260703154138678](images/image-20260703154138678.webp)
 
 为避免驱动安装出现问题，请先点击驱动卸载，再点击驱动安装，驱动成功安装后，如下所示
 
-![image-20260703154211142](images/image-20260703154211142.png)
+![image-20260703154211142](images/image-20260703154211142.webp)
 
 ### 	2.3 RockChip烧录软件安装
 
 解压后直接运行即可（最好解压到全英文路径下面）
 
-![image-20260703154224989](images/image-20260703154224989.png)
+![image-20260703154224989](images/image-20260703154224989.webp)
 
 ## 3. 固件烧录
 
 使用USB Type-A 转 Type-C 数据线连接设备OTG口和PC的USB口
 
-![image-20260703154437621](images/image-2.png)
+![image-20260703154437621](images/image-2.webp)
 
 如何进入烧写模式(Loader)
 
@@ -60,23 +60,23 @@ hdc的工具在bin目录下，打开系统设置环境变量到该目录即可�
 
 这时候进入到烧录工具可以看到下面这个现象
 
-![image-20260703154928499](images/image-20260703154928499.png)
+![image-20260703154928499](images/image-20260703154928499.webp)
 
 导入配置
 
-![image-20260703155038288](images/image-20260703155038288.png)
+![image-20260703155038288](images/image-20260703155038288.webp)
 
-![image-20260703155105076](images/image-20260703155105076.png)
+![image-20260703155105076](images/image-20260703155105076.webp)
 
 导入完成后需要根据列出的项名字选择对应的img文件
 
 例如
 
-![image-20260703155221333](images/image-20260703155221333.png)
+![image-20260703155221333](images/image-20260703155221333.webp)
 
 选择完成后勾选点击执行岂可。
 
-![image-20260703155312653](images/image-27.png)
+![image-20260703155312653](images/image-27.webp)
 
 ## 4. 基础功能验证
 
@@ -89,9 +89,9 @@ hdc的工具在bin目录下，打开系统设置环境变量到该目录即可�
 
 执行wim+r 输入cmd 打开终端，输入adb shell可以进入
 
-![image-20260703155312653](images/image-3.png)
+![image-20260703155312653](images/image-3.webp)
 
-![image-20260703155312653](images/image-4.png)
+![image-20260703155312653](images/image-4.webp)
 
 ### 4.4 BUZZER
 
@@ -105,7 +105,7 @@ echo 0 > /sys/devices/platform/leds/leds/buzzer_gpio/brightness (开启)
 
 接hdmi外接屏，屏幕正常显示
 
-![image-20260703155312653](images/image-5.png)
+![image-20260703155312653](images/image-5.webp)
 
 
 ### 4.6 有线网络
@@ -116,8 +116,8 @@ echo 0 > /sys/devices/platform/leds/leds/buzzer_gpio/brightness (开启)
 ifconfig
 ping baidu.com
 ```
-![image-20260703155312653](images/image-6.png)
-![image-20260703155312653](images/image-7.png)
+![image-20260703155312653](images/image-6.webp)
+![image-20260703155312653](images/image-7.webp)
 
 ### 4.7 CPU-FAN
 
@@ -130,43 +130,43 @@ ping baidu.com
 ```
 hwclock
 ```
-![image-20260703155312653](images/image-8.png)
+![image-20260703155312653](images/image-8.webp)
 
 ### 4.9 485
 
 设备通过485串口和上位机进行通信设备，对应的串口是/dev/ttyS7
 
-![image-20260703155312653](images/image-9.png)
+![image-20260703155312653](images/image-9.webp)
 
 ### 4.10 232
 
 设备通过232串口和上位机进行通信设备，对应的串口是/dev/ttyS0、/dev/ttyS5、/dev/ttyS9
 
-![image-20260703155312653](images/image-10.png)
-![image-20260703155312653](images/image-11.png)
-![image-20260703155312653](images/image-12.png)
+![image-20260703155312653](images/image-10.webp)
+![image-20260703155312653](images/image-11.webp)
+![image-20260703155312653](images/image-12.webp)
 
 ### 4.11 wifi
 
 在桌面打开设置，选择第一个点击进入WLAN进入选择所需网络连接，能够正常上网
 
-![image-20260703155312653](images/image-13.png)
-![image-20260703155312653](images/image-14.png)
-![image-20260703155312653](images/image-15.png)
+![image-20260703155312653](images/image-13.webp)
+![image-20260703155312653](images/image-14.webp)
+![image-20260703155312653](images/image-15.webp)
 
 ### 4.12 bluetooth
 
 在桌面打开设置，选择第二个蓝牙点击进入选择连接对应蓝牙设备，能够正常使用
 
-![image-20260703155312653](images/image-16.png)
-![image-20260703155312653](images/image-17.png)
-![image-20260703155312653](images/image-18.png)
+![image-20260703155312653](images/image-16.webp)
+![image-20260703155312653](images/image-17.webp)
+![image-20260703155312653](images/image-18.webp)
 
 ### 4.13 nvme
 
 设备接上nvme外设，在/dev/block下面能够识别到，并且通过mount，能够实现对nvme的读写
 
-![image-20260703155312653](images/image-19.png)
+![image-20260703155312653](images/image-19.webp)
 
 挂载和卸载命令
 
@@ -206,8 +206,8 @@ SKY1-EVB-PCIEX10.DTB          initrd.img-6.6.89-cix-build-generic
 
 设备接上RK1828外设，执行lspci能够识别设备
 
-![image-20260703155312653](images/image-20.png)
-![image-20260703155312653](images/image-21.png)
+![image-20260703155312653](images/image-20.webp)
+![image-20260703155312653](images/image-21.webp)
 
 
 ### 4.15 NPU-Fan
@@ -221,19 +221,19 @@ SKY1-EVB-PCIEX10.DTB          initrd.img-6.6.89-cix-build-generic
 ```
 vendor/bin/rknn_yolov5_deme
 ```
-![image-20260703155312653](images/image-22.png)
+![image-20260703155312653](images/image-22.webp)
 
 ### 4.17 Audio
 
 设备接上耳机或喇叭，点击桌面音乐图标播放音乐能够正常放声
 
-![image-20260703155312653](images/image-23.png)
+![image-20260703155312653](images/image-23.webp)
 
 通过命令安装对应测试hap，点击录音，录音文件能够正常播放
 
 ```
 hdc install C:\Users\19037\Desktop\recorder.hap
 ```
-![image-20260703155312653](images/image-24.png)
-![image-20260703155312653](images/image-25.png)
-![image-20260703155312653](images/image-26.png)
+![image-20260703155312653](images/image-24.webp)
+![image-20260703155312653](images/image-25.webp)
+![image-20260703155312653](images/image-26.webp)

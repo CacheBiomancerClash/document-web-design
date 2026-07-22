@@ -19,19 +19,19 @@ title: AI边缘工作站 Wiki 教程
 
 **1、   贝启AI边缘工作站外观尺寸示意图**
 
-![image-20260703160600034](./wiki-tutorial-assets/image-20260703160600034.png)
+![image-20260703160600034](./wiki-tutorial-assets/image-20260703160600034.webp)
 
 ​																									图1：   贝启AI边缘工作站外观尺寸示意图
 
 **2、   贝启AI边缘工作站接口示意图**
 
-![image-20260703160816577](./wiki-tutorial-assets/image-20260703160816577.png)
+![image-20260703160816577](./wiki-tutorial-assets/image-20260703160816577.webp)
 
 ​																									图2：   贝启AI边缘工作站接口示意图
 
 **3、   贝启AI边缘工作站主板接口示意图**
 
-![image-20260703160958578](./wiki-tutorial-assets/image-20260703160958578.png)
+![image-20260703160958578](./wiki-tutorial-assets/image-20260703160958578.webp)
 
 ​																									图3：   贝启AI边缘工作站主板接口示意图
 
@@ -39,19 +39,19 @@ title: AI边缘工作站 Wiki 教程
 
 **4、   贝启AI边缘工作站接口外设示意图**
 
-![image-20260703161124442](./wiki-tutorial-assets/image-20260703161124442.png)
+![image-20260703161124442](./wiki-tutorial-assets/image-20260703161124442.webp)
 
 ​																									图4：   贝启AI边缘工作站接口外设示意图
 
 **5、   贝启AI边缘工作站拓展RK1828计算卡**
 
-![image-20260703161254751](./wiki-tutorial-assets/image-20260703161254751.png)
+![image-20260703161254751](./wiki-tutorial-assets/image-20260703161254751.webp)
 
 ​																							图5：   贝启AI边缘工作站拓展RK1828计算卡示意图
 
 ## 二、设备基本参数
 
-![image-20260703161658124](./wiki-tutorial-assets/image-20260703161658124.png)
+![image-20260703161658124](./wiki-tutorial-assets/image-20260703161658124.webp)
 
 ​																										图6：   贝启AI边缘工作站基本参数图
 
@@ -61,19 +61,19 @@ title: AI边缘工作站 Wiki 教程
 
 设备 wan 口接到路由器或者交换机，成功获取到 IP 后(可通过 adb shell ifconfig 查看，需要使用 typec 线连接设备上的 typec 口与 pc)，可通过 ***IP:9090*** (IP 为 adb shell ifconfig 中 end0 网卡的 IP 地址)进行登录，登录页面如下
 
-![image-20251209143054071](./wiki-tutorial-assets/image-20251209143054071.png)
+![image-20251209143054071](./wiki-tutorial-assets/image-20251209143054071.webp)
 
-账号密码均为 linaro，登陆后，在概览界面中可以看到 sn 号，下图红框处的资产标签即为 sn![image-20251209143157525](./wiki-tutorial-assets/image-20251209143157525.png)
+账号密码均为 linaro，登陆后，在概览界面中可以看到 sn 号，下图红框处的资产标签即为 sn![image-20251209143157525](./wiki-tutorial-assets/image-20251209143157525.webp)
 
-在网络界面中可以看到设备上的网卡，目前仅支持对 end0(即 wan 口)，与 wlan0 的配置![image-20251209143415370](./wiki-tutorial-assets/image-20251209143415370.png)
+在网络界面中可以看到设备上的网卡，目前仅支持对 end0(即 wan 口)，与 wlan0 的配置![image-20251209143415370](./wiki-tutorial-assets/image-20251209143415370.webp)
 
 具体配置页面如下，页面上方为当前的流量图，下面可以配置固定 IP，网关等，其他网卡的配置，目前需要在左侧终端页中使用命令行进行配置
 
-![image-20251209155044341](./wiki-tutorial-assets/image-20251209155044341.png)
+![image-20251209155044341](./wiki-tutorial-assets/image-20251209155044341.webp)
 
-左侧服务页面中，可以对开机自启服务等进行配置，选择禁用或者启动服务，如下![image-20251209155837704](./wiki-tutorial-assets/image-20251209155837704.png)
+左侧服务页面中，可以对开机自启服务等进行配置，选择禁用或者启动服务，如下![image-20251209155837704](./wiki-tutorial-assets/image-20251209155837704.webp)
 
-用户账户页面可以对用户进行配置，例如新增用户，删除某个用户，修改某个用户的密码等操作，操作前需要先点击下图红框处接触限制，才可进行操作![image-20251209160106019](./wiki-tutorial-assets/image-20251209160106019.png)
+用户账户页面可以对用户进行配置，例如新增用户，删除某个用户，修改某个用户的密码等操作，操作前需要先点击下图红框处接触限制，才可进行操作![image-20251209160106019](./wiki-tutorial-assets/image-20251209160106019.webp)
 
 ## 四、设备相关例程
 
@@ -89,7 +89,7 @@ title: AI边缘工作站 Wiki 教程
 此处对 demo 进行简单说明
 rtsp 拉流解码 demo 包含如下内容，其中 lib.zip 包含运行需要的库；yolov5_demo.zip 包含可执行程序以及相关文件；拉流解码 ai 识别 demo 使用说明.md 则为 demo 详细使用说明
 
-![image-20260703165924593](./wiki-tutorial-assets/image-20260703165924593.png)
+![image-20260703165924593](./wiki-tutorial-assets/image-20260703165924593.webp)
 
 ##### rtsp 拉流解码 demo 说明
 

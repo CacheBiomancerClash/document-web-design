@@ -17,13 +17,13 @@ RK3576数据采集网关是一款高扩展性且功能强大的数据采集网�
 
 1、接口示意
 
-![image-20260713150723913](./wiki-tutorial-linux-assets/image-20260713150723913.png)
+![image-20260713150723913](./wiki-tutorial-linux-assets/image-20260713150723913.webp)
 
 ​																									图1：   RK3576 数据采集网关接口示意图
 
 2、基本参数
 
-![image-20260713150820954](./wiki-tutorial-linux-assets/image-20260713150820954.png)
+![image-20260713150820954](./wiki-tutorial-linux-assets/image-20260713150820954.webp)
 
 ​																									图2：   RK3576 数据采集网关基本参数图
 
@@ -35,7 +35,7 @@ RK3576数据采集网关是一款高扩展性且功能强大的数据采集网�
 2.   双击 DriverInstall.exe 打开
 3.   为保证驱动正确安装，建议先点击驱动卸载，再进行驱动安装，界面如下
 
-![image-20250221095208235](./wiki-tutorial-linux-assets/image-20250221095208235-1783927265993-3.png)
+![image-20250221095208235](./wiki-tutorial-linux-assets/image-20250221095208235-1783927265993-3.webp)
 
 
 
@@ -49,7 +49,7 @@ RK3576数据采集网关是一款高扩展性且功能强大的数据采集网�
 
 2.   按上述步骤操作后，会显示 “发现一个 LOADER 设备”。右键单击工具空白处，点击导入配置，选择我们提供 parameter.txt，如下
 
-      ![image-20250917163937044](./wiki-tutorial-linux-assets/image-20250917163937044-1783927265993-4.png)
+      ![image-20250917163937044](./wiki-tutorial-linux-assets/image-20250917163937044-1783927265993-4.webp)
 
      根据自己镜像的位置调整镜像路径，然后勾选要更新的 镜像，然后点击“执行”按钮进行升级。
 
@@ -91,6 +91,6 @@ ulimit -n 4096
 /data/llm_demo qwen3576.rkllm
 ```
 
-出现下列日志即可开始提问![image-20260713153859255](./wiki-tutorial-linux-assets/image-20260713153859255.png)
+出现下列日志即可开始提问![image-20260713153859255](./wiki-tutorial-linux-assets/image-20260713153859255.webp)
 
 客户可以通过这个 demo 快速熟悉RK3576 数据采集网关的 npu 等相关能力
