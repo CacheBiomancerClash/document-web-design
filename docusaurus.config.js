@@ -4,6 +4,10 @@ const {hasEnglishDoc, isEnglishBuild} = require('./scripts/english-docs');
 const lightCodeTheme = require('prism-react-renderer').themes.github;
 const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 const splitDocSourceIds = new Set(require('./src/generated/splitDocSourceIds.json'));
+const splitDocSourcePaths = [...splitDocSourceIds].flatMap((id) => [
+  `${id}.md`,
+  `${id}.mdx`,
+]);
 
 function filterEnglishSidebarItems(items) {
   return items.flatMap((item) => {
@@ -326,6 +330,7 @@ const config = {
         docs: {
           path: 'docs_cn',
           routeBasePath: 'docs',
+          exclude: splitDocSourcePaths,
           sidebarPath: require.resolve('./sidebars.js'),
           sidebarItemsGenerator: localizedSidebarItemsGenerator,
           editUrl:
