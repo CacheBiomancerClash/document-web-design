@@ -1,3 +1,10 @@
+---
+sidebar_position: 2
+split_by_h2: true
+sidebar_label: OpenHarmony 用户手册
+title: RK3568 工业控制主板 OpenHarmony 用户手册
+---
+
 # RK3568 OpenHarmony 系统用户手册
 
 ## 一、RK3568工业控制主板介绍
