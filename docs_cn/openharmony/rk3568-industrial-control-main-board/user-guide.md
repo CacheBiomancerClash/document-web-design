@@ -1,10 +1,10 @@
-# RK3588 OpenHarmony 系统用户手册
+# RK3568 OpenHarmony 系统用户手册
 
-## 一、RK3588开发板介绍
+## 一、RK3568工业控制主板介绍
 
-### 1.1 RK3588 开发板简介
+### 1.1 RK3568 工业控制主板简介
 
-本开发板基于瑞芯微 RK3588 高性能处理器设计，集成 CPU、GPU、NPU 等多元计算单元，具备 6.0 TOPs 算力，可满足工业控制、边缘计算、智能终端等场景的应用需求。板载资源丰富，提供双千兆网口、SFP 光口、HDMI 8K 输出、多种串口及扩展接口，支持 4G/5G 和 WiFi 6 等无线通信。
+本开发板基于瑞芯微 RK3568 四核 Cortex-A55 处理器设计，主频最高 2.0GHz，集成 Mali-G52 GPU。板卡定位于工业控制与物联网网关场景，在核心功能完整保留的基础上，对接口布局进行优化精简，以更紧凑的尺寸（146mm×90mm）满足空间受限场景的部署需求。
 
 本手册主要分为三部分：
 
@@ -24,7 +24,7 @@
 
 ## 二、 烧录系统
 
-RK3588 目前支持 **OTG 烧写方式**。用户资料中提供了相应的烧写工具。
+RK3568 目前支持 **OTG 烧写方式**。用户资料中提供了相应的烧写工具。
 
 ### 2.1 准备工作：安装相关驱动
 
@@ -46,7 +46,7 @@ RK3588 目前支持 **OTG 烧写方式**。用户资料中提供了相应的烧�
 
 ---
 
-<img src="images/image-20260708093317617.png" alt="image-20260708093317617" style={{ zoom: '67%' }} />
+<img src="../images/image-20260708093317617.png" alt="image-20260708093317617" style={{ zoom: '67%' }} />
 
 ### 2.2 烧录操作：烧写固件到设备
 
@@ -63,10 +63,20 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 1. 接上电源适配器，开发板上电；
 
-2. 使用 Type-C 线连接开发板 `	TYPE-C` 口和电脑主机；
+2. 使用 USB 线连接开发板的 `	USB OTG `接口与电脑主机 USB 端口；
+
+   > 注意：下图所示，选中的有上下两个USB口，烧录固件时请连接 **底部** 的 USB OTG 接口。
+
+   <img src="../images/image-20260708161029660.png" alt="image-20260708161029660" style={{ zoom: '67%' }} />
 
 3. 按住开发板上的 `recovery` 键不要松开；
+
+   <img src="../images/image-20260708161531529.png" alt="image-20260708161531529" style={{ zoom: '67%' }} />
+
 4. 按一下 `reset` 键，使系统复位；
+
+   <img src="../images/image-20260708161606616.png" alt="image-20260708161606616" style={{ zoom: '67%' }} />
+
 5. RKDevTool 工具上会提示发现 `LOADER` 设备或 `MASKROM` 设备，再松开 `	recovery`按键。
 
 > 注意：识别设备时，开发板上电过程中需要保持 `recovery` 按键按下状态。
@@ -81,33 +91,33 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 3. 清空工具所有项
 
-   <img src="images/image-20260708095206351.png" alt="image-20260708095206351" style={{ zoom: '67%' }} />
+   <img src="../images/image-20260708095206351.png" alt="image-20260708095206351" style={{ zoom: '67%' }} />
 
 4. 清空完成后，点击 **导入配置**；
 
-   <img src="images/image-20260708095250342.png" alt="image-20260708095250342" style={{ zoom: '67%' }} />
+   <img src="../images/image-20260708095250342.png" alt="image-20260708095250342" style={{ zoom: '67%' }} />
 
 5. 选择镜像目录下的 `config.cfg` 文件；
 
-   <img src="images/image-20260708095328768.png" alt="image-20260708095328768" style={{ zoom: '67%' }} />
+   <img src="../images/image-20260708095328768.png" alt="image-20260708095328768" style={{ zoom: '67%' }} />
 
-   <img src="images/image-20260708095354613.png" alt="image-20260708095354613" style={{ zoom: '67%' }} />
+   <img src="../images/image-20260708095354613.png" alt="image-20260708095354613" style={{ zoom: '67%' }} />
 
 6. 依次选择工具所勾选的镜像文件；
 
-   <img src="images/image-20260708095434815.png" alt="image-20260708095434815" style={{ zoom: '67%' }} />
+   <img src="../images/image-20260708095434815.png" alt="image-20260708095434815" style={{ zoom: '67%' }} />
 
-   <img src="images/image-20260708095442188.png" alt="image-20260708095442188" style={{ zoom: '67%' }} />
+   <img src="../images/image-20260708095442188.png" alt="image-20260708095442188" style={{ zoom: '67%' }} />
 
 7. 点击 **执行** 按钮开始升级。
 
-   <img src="images/image-20260708095628639.png" alt="image-20260708095628639" style={{ zoom: '67%' }} />
+   <img src="../images/image-20260708095628639.png" alt="image-20260708095628639" style={{ zoom: '67%' }} />
 
 等待工具左侧显示烧录完成即可。
 
 ---
 
-## 三、RK3588 平台界面功能使用及测试
+## 三、RK3568 平台界面功能使用及测试
 
 ### 3.1 桌面功能测试
 
@@ -122,7 +132,7 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 开发板启动桌面显示如下：
 
-<img src="images/image-20260708101601583.png" alt="image-20260708101601583" style={{ zoom: '67%' }} />
+<img src="../images/image-20260708161945885.png" alt="image-20260708161945885" style={{ zoom: '50%' }} />
 
 ---
 
@@ -144,7 +154,7 @@ RKDevTool 是瑞芯微提供的开发工具。使用前建议将工具解压到*
 
 6. 输入密码并点击连接；
 
-   ![image-20260708101839238](images/image-20260708101839238.png)
+   ![image-20260708101839238](../images/image-20260708101839238.webp)
 
 7. 连接成功后，打开命令行窗口hdc shell 进入Openharmony系统后，进入系统后可使用如下命令查看网络信息：
 
@@ -163,14 +173,14 @@ wlan0 	Linkencap:Ethernet HWaddrc0:f5:35:32:68:da Driverbcmsdh_sdmmc
 
 ### 3.3 网口测试
 
-> 注意：LAN1、LAN2 需要依次测试，测试有线网口时，需要断开 Wi-Fi 或其他网络，避免测试结果混淆。
+> 注意：LAN0、LAN1 需要依次测试，测试有线网口时，需要断开 Wi-Fi 或其他网络，避免测试结果混淆。
 
-#### LAN0 测试示例
+**LAN0 测试示例**
 
 测试步骤：
 
 1. 开发板网口插上以太网；
-2. 打开cmd 命令窗口 ，输入 hdc shell 进入系统
+2. 打开cmd 命令窗口 ，输入 hdc shell 进入Openharmony系统
 3. 使用命令查看网络信息：
 
 ```bash
@@ -249,21 +259,23 @@ hardware=rk3588
 
 串口硬件接口介绍：
 
-<img src="images/image-20260708103337866.png" alt="image-20260708103337866" style={{ zoom: '67%' }} />
+<img src="../images/image-20260708162535161.png" alt="image-20260708162535161" style={{ zoom: '67%' }} />
+
+
 
 测试工具介绍：
 
 1. 485串口测试工具
 
-   <img src="images/image-20260708103711507.png" alt="image-20260708103711507" style={{ zoom: '33%' }} />
+   <img src="../images/image-20260708103711507.png" alt="image-20260708103711507" style={{ zoom: '33%' }} />
 
 2. 232串口测试工具
 
-   <img src="images/image-20260708103725334.png" alt="image-20260708103725334" style={{ zoom: '33%' }} />
+   <img src="../images/image-20260708103725334.png" alt="image-20260708103725334" style={{ zoom: '33%' }} />
 
 3. PC端串口助手
 
-   <img src="images/image-20260708103917216.png" alt="image-20260708103917216" style={{ zoom: '33%' }} />
+   <img src="../images/image-20260708103917216.png" alt="image-20260708103917216" style={{ zoom: '33%' }} />
 
    > 注意：测试工具不限，本例测试以如图所示工具进行测试，实际使用其他工具均可。
 
@@ -271,7 +283,7 @@ hardware=rk3588
 
 #### 3.5.2 RS485功能测试
 
-##### 3.5.2.1 RS485_UART0 发送功能测试
+##### 3.5.2.1 RS485_UART3 发送功能测试
 
 测试步骤：
 
@@ -281,7 +293,7 @@ hardware=rk3588
 4. 在终端输入：
 
 ```bash
-microcom -s 115200 /dev/ttyS0
+microcom -s 115200 /dev/ttyS3
 ```
 
 命令执行后，在终端命令行下方输入测试数据，PC端串口助手侧应能接收到对应数据。
@@ -292,11 +304,11 @@ microcom -s 115200 /dev/ttyS0
 
 测试结果：
 
-![image-20260708104908522](images/image-20260708104908522.png)
+![image-20260708104908522](../images/image-20260708104908522.webp)
 
 ---
 
-##### 3.5.2.2 RS485_UART0 接收功能测试
+##### 3.5.2.2 RS485_UART3 接收功能测试
 
 测试步骤：
 
@@ -305,7 +317,7 @@ microcom -s 115200 /dev/ttyS0
 2. 在cmd命令终端输入：
 
    ~~~
-   microcom -s 115200 /dev/ttyS0
+   microcom -s 115200 /dev/ttyS3
    ~~~
 
 3. PC端串口助手点击发送数据；
@@ -316,15 +328,15 @@ microcom -s 115200 /dev/ttyS0
 
 测试结果：
 
-![image-20260708105238804](images/image-20260708105238804.png)
+![image-20260708151126012](../images/image-20260708151126012.webp)
 
-> 注意：如果接收不到，优先检查 A/B 接线是否接反、串口参数是否一致。
+> 说明：UART4 测试步骤一致，按照操作示例即可。
 
 ---
 
 #### 3.5.3 UART 232 测试
 
-##### 3.5.3.1 RS232_UART5 发送功能测试
+##### 3.5.3.1 RS232_UART7 发送功能测试
 
 测试步骤：
 
@@ -337,7 +349,7 @@ microcom -s 115200 /dev/ttyS0
 4. 在终端输入：
 
    ~~~
-   microcom -s 115200 /dev/ttyS5
+   microcom -s 115200 /dev/ttyS7
    ~~~
 
 5. 命令执行后，在命令行下方输入
@@ -352,11 +364,11 @@ microcom -s 115200 /dev/ttyS0
 
 测试结果：
 
-![image-20260708105717222](images/image-20260708105717222.png)
+![image-20260708105717222](../images/image-20260708105717222.webp)
 
 ---
 
-##### 3.5.3.2 RS232_UART5 接收测试
+##### 3.5.3.2 RS232_UART7 接收测试
 
 测试步骤：
 
@@ -365,7 +377,7 @@ microcom -s 115200 /dev/ttyS0
 2. 在cmd命令终端输入：
 
    ~~~
-   microcom -s 115200 /dev/ttyS5
+   microcom -s 115200 /dev/ttyS7
    ~~~
 
 3. 串口助手中发送数据；
@@ -376,7 +388,9 @@ microcom -s 115200 /dev/ttyS0
 
 测试结果：
 
-![image-20260708110448114](images/image-20260708110448114.png)
+![image-20260708151226986](../images/image-20260708151226986.webp)
+
+> 说明：UART9测试步骤一致，按照操作示例即可。
 
 ---
 
@@ -395,7 +409,7 @@ microcom -s 115200 /dev/ttyS0
 
 如图所示：
 
-<img src="images/image-20260708110657942.png" alt="image-20260708110657942" style={{ zoom: '67%' }} />
+<img src="../images/image-20260708110657942.png" alt="image-20260708110657942" style={{ zoom: '67%' }} />
 
 ---
 
@@ -425,7 +439,7 @@ USB 端口可连接以下设备进行测试：
 
 1. 确认蓝牙天线已正确连接；
 
-   <img src="images/image-20260708110932997.png" alt="image-20260708110932997" style={{ zoom: '67%' }} />
+   <img src="../images/image-20260708163011306.png" alt="image-20260708163011306" style={{ zoom: '67%' }} />
 
 2. 打开系统 **设置**；
 
@@ -441,7 +455,7 @@ USB 端口可连接以下设备进行测试：
 
 8. 确认连接成功。
 
-   <img src="images/image-20260708111007781.png" alt="image-20260708111007781" style={{ zoom: '67%' }} />
+   <img src="../images/image-20260708151407630.png" alt="image-20260708151407630" style={{ zoom: '67%' }} />
 
 测试判断：
 
@@ -460,9 +474,11 @@ USB 端口可连接以下设备进行测试：
 
 2. 插入耳机；
 
-   <img src="images/image-20260708111238159.png" alt="image-20260708111238159" style={{ zoom: '67%' }} />
+   <img src="../images/image-20260708163102238.png" alt="image-20260708163102238" style={{ zoom: '67%' }} />
 
-3. 打开桌面音乐播放器；
+3. 打开系统桌面的音乐播放器；
+
+   <img src="../images/image-20260708151839680.png" alt="image-20260708151839680" style={{ zoom: '67%' }} />
 
 4. 点击播放音乐；
 
@@ -475,30 +491,7 @@ USB 端口可连接以下设备进行测试：
 
 ---
 
-### 3.10 音量键测试
-
-测试步骤：
-
-1. 按下 `音量 +` 按键；
-
-2. 按下 `音量 -` 按键；
-
-   <img src="images/image-20260708111400425.png" alt="image-20260708111400425" style={{ zoom: '67%' }} />
-
-3. 查看桌面音量状态是否有更新；
-
-   <img src="images/image-20260708111513722.png" alt="image-20260708111513722" style={{ zoom: '67%' }} />
-
-4. 确认系统音量条是否正常显示并变化。
-
-测试判断：
-
-- 音量状态随按键变化，说明音量键功能正常；
-- 系统桌面出现音量弹窗显示。
-
----
-
-### 3.11 MIPI 相机测试
+### 3.10 MIPI 相机测试
 
 测试步骤：
 
@@ -506,7 +499,7 @@ USB 端口可连接以下设备进行测试：
 
 2. 确认排线方向和接口连接正确；
 
-   <img src="images/image-20260708111533629.png" alt="image-20260708111533629" style={{ zoom: '67%' }} />
+   <img src="../images/image-20260708163724803.png" alt="image-20260708163724803" style={{ zoom: '67%' }} />
 
 3. 打开系统相机 HAP；
 
@@ -525,5 +518,5 @@ USB 端口可连接以下设备进行测试：
 - 相机模组是否匹配；
 - 相机应用权限或服务是否正常。
 
----
+***
 
