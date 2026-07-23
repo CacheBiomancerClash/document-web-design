@@ -173,33 +173,6 @@
       "href": "wiki-tutorial-linux/03"
     }
   ],
-  "main-board/robo3588-robot-main-board/wiki-tutorial": [
-    {
-      "type": "link",
-      "label": "一、开发板详情",
-      "href": "wiki-tutorial/01"
-    },
-    {
-      "type": "link",
-      "label": "二、开发板规格",
-      "href": "wiki-tutorial/02"
-    },
-    {
-      "type": "link",
-      "label": "三、开发板应用场景",
-      "href": "wiki-tutorial/03"
-    },
-    {
-      "type": "link",
-      "label": "四、搭建开发环境",
-      "href": "wiki-tutorial/04"
-    },
-    {
-      "type": "link",
-      "label": "五、编译调试",
-      "href": "wiki-tutorial/05"
-    }
-  ],
   "main-board/robo3588-robot-main-board/wiki-tutorial-linux": [
     {
       "type": "link",
@@ -210,6 +183,38 @@
       "type": "link",
       "label": "二、设备相关例程",
       "href": "wiki-tutorial-linux/02"
+    }
+  ],
+  "main-board/robo3588-robot-main-board/wiki-tutorial-openharmony": [
+    {
+      "type": "link",
+      "label": "一、开发板详情",
+      "href": "wiki-tutorial-openharmony/01"
+    },
+    {
+      "type": "link",
+      "label": "二、开发板规格",
+      "href": "wiki-tutorial-openharmony/02"
+    },
+    {
+      "type": "link",
+      "label": "三、开发板应用场景",
+      "href": "wiki-tutorial-openharmony/03"
+    },
+    {
+      "type": "link",
+      "label": "四、搭建开发环境",
+      "href": "wiki-tutorial-openharmony/04"
+    },
+    {
+      "type": "link",
+      "label": "五、编译调试",
+      "href": "wiki-tutorial-openharmony/05"
+    },
+    {
+      "type": "link",
+      "label": "六、基础功能验证",
+      "href": "wiki-tutorial-openharmony/06"
     }
   ],
   "openharmony/rk3568-15-6-inch-panel/RK3568_Industrial_board_15.6_inch": [
