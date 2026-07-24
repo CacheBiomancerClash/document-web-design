@@ -30,23 +30,23 @@ title: RK3506 工控屏 Wiki 教程
 
 adb的工具在bin目录下，打开系统设置环境变量到该目录即可使用adb工具。
 
-![image-20260703153900640](images/image-20260703153900640.png)
+![image-20260703153900640](images/image-20260703153900640.webp)
 
 ### 	2.2 RockChip烧录驱动安装
 
-![image-20260703145838332](images/image-20260703154041402.png)
+![image-20260703145838332](images/image-20260703154041402.webp)
 
-![image-20260724092920834](images/image-20260724092920834.png)
+![image-20260724092920834](images/image-20260724092920834.webp)
 
 为避免驱动安装出现问题，请先点击驱动卸载，再点击驱动安装，驱动成功安装后，如下所示
 
-![image-20260724092949352](images/image-20260724092949352.png)
+![image-20260724092949352](images/image-20260724092949352.webp)
 
 ### 	2.3 RockChip烧录软件安装
 
 解压后直接运行即可（最好解压到全英文路径下面）
 
-![image-20260724093008031](images/image-20260724093008031.png)
+![image-20260724093008031](images/image-20260724093008031.webp)
 
 ## 3. 固件烧录
 
@@ -61,35 +61,35 @@ adb的工具在bin目录下，打开系统设置环境变量到该目录即可�
 
 这时候进入到烧录工具可以看到下面这个现象
 
-![image-20260724093026455](images/image-20260724093026455.png)
+![image-20260724093026455](images/image-20260724093026455.webp)
 
 导入配置
 
-![image-20260724093142905](images/image-20260724093142905.png)
+![image-20260724093142905](images/image-20260724093142905.webp)
 
-![image-20260724093206781](images/image-20260724093206781.png)
+![image-20260724093206781](images/image-20260724093206781.webp)
 
 导入完成后需要根据列出的项名字选择对应的img文件
 
 例如
 
-![image-20260703155221333](images/image-20260724093218187.png)
+![image-20260703155221333](images/image-20260724093218187.webp)
 
 选择完成后勾选点击执行岂可。
 
-![image-20260703155312653](images/image-20260724093228554.png)
+![image-20260703155312653](images/image-20260724093228554.webp)
 
 ## 4. 基础功能验证
 
 ### 4.1 USB功能测试
 
-![image-20260703174227425](images/image-20260724093244957.png)
+![image-20260703174227425](images/image-20260724093244957.webp)
 
 插入U盘到USB-HOST，使用adb shell进入设备终端可以查看当前U盘是否被挂载
 
 ### 4.2 DODI功能测试
 
-![image-20260703181123161](images/image-20260724093923678.png)
+![image-20260703181123161](images/image-20260724093923678.webp)
 
 ```
 IN1节点 /sys/devices/platform/gpios_dido/DIN1
@@ -106,7 +106,7 @@ IN1与IN2使用cat查看输入，返回值为0为输入低电平，返回值为1
 
 ### 4.3 LED功能测试
 
-![image-20260703181226587](images/image-20260724093941364.png)
+![image-20260703181226587](images/image-20260724093941364.webp)
 
 ```
 LED1控制节点 /sys/class/leds/led-1/brightness
@@ -119,9 +119,9 @@ LED4控制节点 /sys/class/leds/led-4/brightness
 
 ### 4.4 CAN功能测试
 
-![image-20260724094002244](images/image-20260724094002244.png)
+![image-20260724094002244](images/image-20260724094002244.webp)
 
-![image-20260724094022837](images/image-20260724094022837.png)
+![image-20260724094022837](images/image-20260724094022837.webp)
 
 ```
 CAN测试方法
@@ -151,7 +151,7 @@ candump can1
 
 ### 4.5 GPS功能测试
 
-![image-20260724094038783](images/image-20260724094038783.png)
+![image-20260724094038783](images/image-20260724094038783.webp)
 
 ```
 执行microcom -s 115200 /dev/ttyS5 可以看见GPS报文
@@ -159,7 +159,7 @@ candump can1
 
 ### 4.6 RS232 RS485
 
-![image-20260724094054085](images/image-20260724094054085.png)
+![image-20260724094054085](images/image-20260724094054085.webp)
 
 ```
 485_1 UART1 /dev/ttyS1   485_2 UART2 /dev/ttyS2
