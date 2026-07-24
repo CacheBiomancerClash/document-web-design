@@ -723,8 +723,13 @@
     },
     {
       "type": "link",
-      "label": "三、设备例程",
+      "label": "三、设备接口使用说明",
       "href": "wiki-tutorial-linux/03"
+    },
+    {
+      "type": "link",
+      "label": "四、设备例程",
+      "href": "wiki-tutorial-linux/04"
     }
   ],
   "terminal/rk3588-edge-computing-industrial-gateway/wiki-tutorial-openeuler": [
