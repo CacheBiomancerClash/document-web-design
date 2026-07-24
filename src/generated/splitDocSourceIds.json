@@ -3,6 +3,7 @@
   "core-board/rk3568-industrial-core-board/wiki-tutorial",
   "core-board/rk3588-core-board/wiki-tutorial",
   "core-board/tb-96aiot-1808co/wiki-tutorial",
+  "main-board/rk3506-industrial-main-board/OpenHarmony",
   "main-board/rk3506-industrial-main-board/Quick-Start-Manual-CN",
   "main-board/rk3568-main-board/wiki-tutorial",
   "main-board/rk3576-industrial-control-main-board/wiki-tutorial-linux",
@@ -24,9 +25,12 @@
   "terminal/Robo3588-Robot-Mainboard/wiki-tutorial",
   "terminal/ai-edge-workstation/wiki-tutorial",
   "terminal/bq8180-ai-mini-pc/wiki-tutorial",
+  "terminal/rk3506-industrial-panel/OpenHarmony",
   "terminal/rk3506-industrial-panel/buildroot",
   "terminal/rk3506-industrial-panel/wiki-tutorial",
   "terminal/rk3576-data-acquisition-gateway/wiki-tutorial-linux",
   "terminal/rk3588-edge-computing-industrial-gateway/wiki-tutorial-openeuler",
-  "terminal/ten-six-inch-tablet/wiki-tutorial"
+  "terminal/ten-six-inch-tablet/wiki-tutorial",
+  "terminal/ten-six-inch-tablet/wiki-tutorial-Android",
+  "terminal/ten-six-inch-tablet/wiki-tutorial-Android-OpenHarmony"
 ]
