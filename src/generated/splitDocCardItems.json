@@ -196,8 +196,13 @@
     },
     {
       "type": "link",
-      "label": "三、设备例程",
+      "label": "三、设备接口使用说明",
       "href": "wiki-tutorial-linux/03"
+    },
+    {
+      "type": "link",
+      "label": "四、设备例程",
+      "href": "wiki-tutorial-linux/04"
     }
   ],
   "main-board/rk3588-industrial-main-board/wiki-tutorial-openeuler": [
@@ -583,13 +588,18 @@
     },
     {
       "type": "link",
-      "label": "三、设备管理",
+      "label": "三、设备接口使用说明",
       "href": "wiki-tutorial/03"
     },
     {
       "type": "link",
-      "label": "四、设备相关例程",
+      "label": "四、设备管理",
       "href": "wiki-tutorial/04"
+    },
+    {
+      "type": "link",
+      "label": "五、设备相关例程",
+      "href": "wiki-tutorial/05"
     }
   ],
   "terminal/bq8180-ai-mini-pc/wiki-tutorial": [
