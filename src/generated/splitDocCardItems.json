@@ -252,8 +252,13 @@
     },
     {
       "type": "link",
-      "label": "二、设备相关例程",
+      "label": "二、设备接口使用说明",
       "href": "wiki-tutorial-linux/02"
+    },
+    {
+      "type": "link",
+      "label": "三、设备相关例程",
+      "href": "wiki-tutorial-linux/03"
     }
   ],
   "main-board/robo3588-robot-main-board/wiki-tutorial-openharmony": [
