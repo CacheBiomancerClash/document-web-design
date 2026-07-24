@@ -29,11 +29,11 @@ title: RK3506 主板Buildroot系统 Wiki 教程
 
 adb的工具在bin目录下，打开系统设置环境变量到该目录即可使用adb工具。
 
-![image-20260703153900640](images/image-20260703153900640.png)
+![image-20260703153900640](images/image-20260703153900640.webp)
 
 ### 	2.2 RockChip烧录驱动安装
 
-![image-20260703145838332](images/image-20260703154041402.png)
+![image-20260703145838332](images/image-20260703154041402.webp)
 
 ![image-20260703154138678](images/image-20260703154138678.webp)
 
