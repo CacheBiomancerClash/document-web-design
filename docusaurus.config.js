@@ -159,12 +159,12 @@ const productNavGroups = [
   {
     label: '主板',
     items: [
-      'RK3568 主板',
+      'RK3568鸿蒙主线开发板',
       'RK3568 工业控制主板',
       'RK3576 工业控制主板',
       'RK3588 工业主板',
       'RK3576 商业显示主板',
-      'RK3588 主板',
+      'RK3588核心板+底板',
       'Robo3588机器人主板',
       'RK3506 工业主板',
       'Carrier Board',
@@ -173,21 +173,21 @@ const productNavGroups = [
   {
     label: '终端',
     items: [
-      'Robo3588 机器人主板',
+      'Robo3588 机器人中枢',
       'AI边缘工作站',
       'RK3576 数据采集网关',
       '8英寸平板',
       '10.6英寸平板',
       '11英寸平板',
       'RK3568 数据采集网关',
-      'RK3568工控屏',
+      'RK3568工控屏（10.1寸）',
       'RK3588 边缘控制网关',
       '工控屏',
       '拼接屏处理器',
       '视频优化盒子',
       'RK3588边缘计算工业网关',
-      'RK3568-15.6英寸屏',
-      'RK3506 工控屏',
+      'RK3568工控屏（15.6寸）',
+      'RK3506 工控屏（10.1寸）',
       'BQ8180 AI Mini PC',
     ],
   },
@@ -207,7 +207,7 @@ const productNavGroups = [
   {
     label: 'OpenHarmony',
     items: [
-      'RK3568 主板',
+      'RK3568鸿蒙主线开发板',
       'RK3576 数据采集网关',
       'RK3568 工业控制主板',
       'RK3576 工业控制主板',
@@ -218,14 +218,14 @@ const productNavGroups = [
       'RK3588工业主板',
       'RK3576 商业显示主板',
       '工控屏',
-      'RK3588 主板',
+      'RK3588核心板+底板',
       '拼接屏处理器',
     ],
   },
   {
     label: 'MineHarmony',
     items: [
-      'RK3568 主板',
+      'RK3568鸿蒙主线开发板',
       'RK3568 工业控制主板',
       'RK3576 工业控制主板',
       '8英寸平板',
@@ -243,15 +243,18 @@ const productDocLinks = {
   'RK3399 Pro 核心板': '/docs/core-board/rk3399-pro-core-board',
   'TB-96AIoT-1808CO': '/docs/core-board/tb-96aiot-1808co',
   'RK3568 主板': '/docs/main-board/rk3568-main-board',
+  'RK3568鸿蒙主线开发板': '/docs/main-board/rk3568-main-board',
   'RK3568 工业控制主板': '/docs/main-board/rk3568-industrial-control-main-board',
   'RK3576 工业控制主板': '/docs/main-board/rk3576-industrial-control-main-board',
   'RK3588 工业主板': '/docs/main-board/rk3588-industrial-main-board',
   'RK3588工业主板': '/docs/main-board/rk3588-industrial-main-board',
   'RK3576 商业显示主板': '/docs/main-board/rk3576-commercial-display-main-board',
   'RK3588 主板': '/docs/main-board/rk3588-main-board',
+  'RK3588核心板+底板': '/docs/main-board/rk3588-main-board',
   'Robo3588机器人主板': '/docs/main-board/robo3588-robot-main-board',
   'RK3506 工业主板': '/docs/main-board/rk3506-industrial-main-board',
   'Robo3588 机器人主板': '/docs/terminal/Robo3588-Robot-Mainboard',
+  'Robo3588 机器人中枢': '/docs/terminal/Robo3588-Robot-Mainboard',
   'AI边缘工作站': '/docs/terminal/ai-edge-workstation',
   'RK3576 数据采集网关': '/docs/terminal/rk3576-data-acquisition-gateway',
   '8英寸平板': '/docs/terminal/eight-inch-tablet',
@@ -259,13 +262,16 @@ const productDocLinks = {
   '11英寸平板': '/docs/terminal/eleven-inch-tablet',
   'RK3568 数据采集网关': '/docs/terminal/rk3568-data-acquisition-gateway',
   'RK3568工控屏': '/docs/terminal/rk3568-industrial-panel',
+  'RK3568工控屏（10.1寸）': '/docs/terminal/rk3568-industrial-panel',
   'RK3588 边缘控制网关': '/docs/terminal/rk3588-edge-control-gateway',
   '工控屏': '/docs/terminal/industrial-panel',
   '拼接屏处理器': '/docs/terminal/video-wall-processor',
   '视频优化盒子': '/docs/terminal/video-optimization-box',
   'RK3588边缘计算工业网关': '/docs/terminal/rk3588-edge-computing-industrial-gateway',
   'RK3568-15.6英寸屏': '/docs/terminal/rk3568-15-6-inch-panel',
+  'RK3568工控屏（15.6寸）': '/docs/terminal/rk3568-15-6-inch-panel',
   'RK3506 工控屏': '/docs/terminal/rk3506-industrial-panel',
+  'RK3506 工控屏（10.1寸）': '/docs/terminal/rk3506-industrial-panel',
   'BQ8180 AI Mini PC': '/docs/terminal/bq8180-ai-mini-pc',
   'Carrier Board': '/docs/main-board/carrier-board',
 };
@@ -312,16 +318,8 @@ const getProductNavbarItem = (label, section) =>
         href: '#',
       };
 
-function isNavbarProductHidden(label, section) {
-  const productLink = productDocLinks[label];
-  const contextualProductLink = getSectionProductLink(productLink, section);
-  const match = contextualProductLink?.match(/^\/docs\/([^/?#]+)\/([^/?#]+)/);
-
-  if (!match) {
-    return false;
-  }
-
-  const docsRoot = isEnglishBuild()
+const getNavbarDocsRoot = () =>
+  isEnglishBuild()
     ? path.join(
         __dirname,
         'docs_en',
@@ -330,33 +328,86 @@ function isNavbarProductHidden(label, section) {
         'current',
       )
     : path.join(__dirname, 'docs_cn');
-  const readmePath = path.join(docsRoot, match[1], match[2], 'README.md');
+
+function getNavbarReadmeFrontMatter(...pathSegments) {
+  const readmePath = path.join(getNavbarDocsRoot(), ...pathSegments, 'README.md');
 
   if (!fs.existsSync(readmePath)) {
-    return false;
+    return '';
   }
 
   const source = fs.readFileSync(readmePath, 'utf8');
-  const frontMatter = source.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-
-  return /^hide_from_sidebar:\s*true\s*$/m.test(frontMatter?.[1] || '');
+  return source.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] || '';
 }
 
-const productNavbarItems = productNavGroups.map((group) => {
+function isNavbarReadmeHidden(...pathSegments) {
+  return /^hide_from_sidebar:\s*true\s*$/m.test(
+    getNavbarReadmeFrontMatter(...pathSegments),
+  );
+}
+
+function getNavbarProductLocation(label, section) {
+  const productLink = productDocLinks[label];
+  const contextualProductLink = getSectionProductLink(productLink, section);
+  const match = contextualProductLink?.match(/^\/docs\/([^/?#]+)\/([^/?#]+)/);
+
+  return match ? {section: match[1], product: match[2]} : undefined;
+}
+
+function isNavbarProductHidden(label, section) {
+  const location = getNavbarProductLocation(label, section);
+  return location
+    ? isNavbarReadmeHidden(location.section, location.product)
+    : false;
+}
+
+function compareNavbarProducts(leftLabel, rightLabel, section) {
+  const getSortMetadata = (label) => {
+    const location = getNavbarProductLocation(label, section);
+    const frontMatter = location
+      ? getNavbarReadmeFrontMatter(location.section, location.product)
+      : '';
+    const position = Number(
+      frontMatter.match(/^sidebar_position:\s*(-?\d+(?:\.\d+)?)\s*$/m)?.[1],
+    );
+
+    return {
+      position: Number.isFinite(position) ? position : Number.MAX_SAFE_INTEGER,
+      path: location ? `${location.section}/${location.product}` : label,
+    };
+  };
+  const left = getSortMetadata(leftLabel);
+  const right = getSortMetadata(rightLabel);
+
+  if (left.position !== right.position) {
+    return left.position - right.position;
+  }
+
+  return left.path < right.path ? -1 : left.path > right.path ? 1 : 0;
+}
+
+const productNavbarItems = productNavGroups.flatMap((group) => {
   const section = contextualProductGroups[group.label];
   const groupLink = productNavGroupLinks[group.label];
-  const labels = group.items.filter(
-    (label) => !isNavbarProductHidden(label, section),
-  );
+  const navbarSection =
+    section || groupLink?.match(/^\/docs\/([^/?#]+)/)?.[1];
 
-  return {
+  if (navbarSection && isNavbarReadmeHidden(navbarSection)) {
+    return [];
+  }
+
+  const labels = group.items
+    .filter((label) => !isNavbarProductHidden(label, section))
+    .sort((left, right) => compareNavbarProducts(left, right, section));
+
+  return [{
     type: 'dropdown',
     label: group.label,
     position: 'left',
     className: 'product-nav-dropdown',
     ...(groupLink ? {to: withSidebarContext(groupLink, section)} : {}),
     items: labels.map((label) => getProductNavbarItem(label, section)),
-  };
+  }];
 });
 
 /** @type {import('@docusaurus/types').Config} */
