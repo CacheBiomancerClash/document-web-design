@@ -313,8 +313,16 @@ for (const docsRoot of docsRoots) {
     const { sourceDocId, cardItems } = writeSplitDoc(docsRoot, splitSource);
     splitSourceIds.add(sourceDocId);
     splitCardItemsBySourceId.set(sourceDocId, cardItems);
+
+    // 拆分完成后删除源码 md，生成的子页面就是最终文档
+    fs.unlinkSync(splitSource.filePath);
   }
 }
 
-writeGeneratedSplitSources(splitSourceIds);
-writeGeneratedSplitCardItems(splitCardItemsBySourceId);
+// 只有确实处理了拆分时，才覆写 JSON 元数据；
+// 若没有待拆分源码（例如之前已拆分完且删除了源码 md），
+// 则保留已有 JSON 文件不变，避免 CI 场景下清空元数据。
+if (splitSourceIds.size > 0) {
+  writeGeneratedSplitSources(splitSourceIds);
+  writeGeneratedSplitCardItems(splitCardItemsBySourceId);
+}
