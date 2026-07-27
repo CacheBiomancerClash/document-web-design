@@ -304,7 +304,7 @@ const getSectionProductLink = (productLink, section) =>
 const getProductNavbarItem = (label, section) =>
   productDocLinks[label]
     ? {
-        label,
+        label: getNavbarProductDisplayLabel(label, section),
         to: withSidebarContext(
           getSectionProductLink(productDocLinks[label], section),
           section,
@@ -352,6 +352,25 @@ function getNavbarProductLocation(label, section) {
   const match = contextualProductLink?.match(/^\/docs\/([^/?#]+)\/([^/?#]+)/);
 
   return match ? {section: match[1], product: match[2]} : undefined;
+}
+
+function getNavbarProductDisplayLabel(label, section) {
+  const location = getNavbarProductLocation(label, section);
+  const frontMatter = location
+    ? getNavbarReadmeFrontMatter(location.section, location.product)
+    : '';
+  const value = frontMatter
+    .match(/^sidebar_label:\s*(.+?)\s*$/m)?.[1]
+    ?.trim();
+
+  if (!value) {
+    return label;
+  }
+
+  const hasMatchingQuotes =
+    (value.startsWith('"') && value.endsWith('"')) ||
+    (value.startsWith("'") && value.endsWith("'"));
+  return hasMatchingQuotes ? value.slice(1, -1) : value;
 }
 
 function isNavbarProductHidden(label, section) {
