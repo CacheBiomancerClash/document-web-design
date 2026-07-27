@@ -239,6 +239,7 @@ function writeSplitDoc(docsRoot, splitSource) {
     sidebar_label: parentLabel,
     title: splitSource.frontMatter.title || parentLabel,
     generated_from_split_doc: sourceDocId,
+    editUrl: false,
   };
   const cardItems = sections.map((section, index) => ({
     type: 'link',
@@ -265,6 +266,7 @@ function writeSplitDoc(docsRoot, splitSource) {
       sidebar_label: section.title,
       title: parentTitle ? `${parentTitle} - ${section.title}` : section.title,
       generated_from_split_doc: sourceDocId,
+      editUrl: false,
     };
     const sectionBody = rewriteRelativeLinks(section.lines.join('\n').trim());
     const sectionSource = [
@@ -311,9 +313,6 @@ for (const docsRoot of docsRoots) {
     const { sourceDocId, cardItems } = writeSplitDoc(docsRoot, splitSource);
     splitSourceIds.add(sourceDocId);
     splitCardItemsBySourceId.set(sourceDocId, cardItems);
-
-    // 拆分完成后删除源码 md，生成的子页面就是最终文档，不再保留源文件
-    fs.unlinkSync(splitSource.filePath);
   }
 }
 
