@@ -207,7 +207,7 @@ const productNavGroups = [
   {
     label: 'OpenHarmony',
     items: [
-      'RK3568 主板',
+      'RK3568鸿蒙主线开发板',
       'RK3576 数据采集网关',
       'RK3568 工业控制主板',
       'RK3576 工业控制主板',
@@ -218,14 +218,14 @@ const productNavGroups = [
       'RK3588工业主板',
       'RK3576 商业显示主板',
       '工控屏',
-      'RK3588 主板',
+      'RK3588核心板+底板',
       '拼接屏处理器',
     ],
   },
   {
     label: 'MineHarmony',
     items: [
-      'RK3568 主板',
+      'RK3568鸿蒙主线开发板',
       'RK3568 工业控制主板',
       'RK3576 工业控制主板',
       '8英寸平板',
