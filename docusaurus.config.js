@@ -329,25 +329,61 @@ const getNavbarDocsRoot = () =>
       )
     : path.join(__dirname, 'docs_cn');
 
-function isNavbarReadmeHidden(...pathSegments) {
+function getNavbarReadmeFrontMatter(...pathSegments) {
   const readmePath = path.join(getNavbarDocsRoot(), ...pathSegments, 'README.md');
 
   if (!fs.existsSync(readmePath)) {
-    return false;
+    return '';
   }
 
   const source = fs.readFileSync(readmePath, 'utf8');
-  const frontMatter = source.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-
-  return /^hide_from_sidebar:\s*true\s*$/m.test(frontMatter?.[1] || '');
+  return source.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] || '';
 }
 
-function isNavbarProductHidden(label, section) {
+function isNavbarReadmeHidden(...pathSegments) {
+  return /^hide_from_sidebar:\s*true\s*$/m.test(
+    getNavbarReadmeFrontMatter(...pathSegments),
+  );
+}
+
+function getNavbarProductLocation(label, section) {
   const productLink = productDocLinks[label];
   const contextualProductLink = getSectionProductLink(productLink, section);
   const match = contextualProductLink?.match(/^\/docs\/([^/?#]+)\/([^/?#]+)/);
 
-  return match ? isNavbarReadmeHidden(match[1], match[2]) : false;
+  return match ? {section: match[1], product: match[2]} : undefined;
+}
+
+function isNavbarProductHidden(label, section) {
+  const location = getNavbarProductLocation(label, section);
+  return location
+    ? isNavbarReadmeHidden(location.section, location.product)
+    : false;
+}
+
+function compareNavbarProducts(leftLabel, rightLabel, section) {
+  const getSortMetadata = (label) => {
+    const location = getNavbarProductLocation(label, section);
+    const frontMatter = location
+      ? getNavbarReadmeFrontMatter(location.section, location.product)
+      : '';
+    const position = Number(
+      frontMatter.match(/^sidebar_position:\s*(-?\d+(?:\.\d+)?)\s*$/m)?.[1],
+    );
+
+    return {
+      position: Number.isFinite(position) ? position : Number.MAX_SAFE_INTEGER,
+      path: location ? `${location.section}/${location.product}` : label,
+    };
+  };
+  const left = getSortMetadata(leftLabel);
+  const right = getSortMetadata(rightLabel);
+
+  if (left.position !== right.position) {
+    return left.position - right.position;
+  }
+
+  return left.path < right.path ? -1 : left.path > right.path ? 1 : 0;
 }
 
 const productNavbarItems = productNavGroups.flatMap((group) => {
@@ -360,9 +396,9 @@ const productNavbarItems = productNavGroups.flatMap((group) => {
     return [];
   }
 
-  const labels = group.items.filter(
-    (label) => !isNavbarProductHidden(label, section),
-  );
+  const labels = group.items
+    .filter((label) => !isNavbarProductHidden(label, section))
+    .sort((left, right) => compareNavbarProducts(left, right, section));
 
   return [{
     type: 'dropdown',
