@@ -1,5 +1,7 @@
 // @ts-check
 
+const fs = require('fs');
+const path = require('path');
 const {hasEnglishDoc, isEnglishBuild} = require('./scripts/english-docs');
 const lightCodeTheme = require('prism-react-renderer').themes.github;
 const darkCodeTheme = require('prism-react-renderer').themes.dracula;
@@ -27,7 +29,8 @@ function filterEnglishSidebarItems(items) {
 
     const filteredItems = filterEnglishSidebarItems(item.items);
     const hasLocalizedLink =
-      item.link?.type !== 'doc' || hasEnglishDoc(item.link.id);
+      item.link != null &&
+      (item.link.type !== 'doc' || hasEnglishDoc(item.link.id));
 
     if (filteredItems.length === 0 && !hasLocalizedLink) {
       return [];
@@ -309,9 +312,42 @@ const getProductNavbarItem = (label, section) =>
         href: '#',
       };
 
+function isTerminalNavbarProductHidden(label) {
+  const productLink = productDocLinks[label];
+  const match = productLink?.match(/^\/docs\/terminal\/([^/?#]+)/);
+
+  if (!match) {
+    return false;
+  }
+
+  const docsRoot = isEnglishBuild()
+    ? path.join(
+        __dirname,
+        'docs_en',
+        'en',
+        'docusaurus-plugin-content-docs',
+        'current',
+      )
+    : path.join(__dirname, 'docs_cn');
+  const readmePath = path.join(docsRoot, 'terminal', match[1], 'README.md');
+
+  if (!fs.existsSync(readmePath)) {
+    return false;
+  }
+
+  const source = fs.readFileSync(readmePath, 'utf8');
+  const frontMatter = source.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+
+  return /^hide_from_sidebar:\s*true\s*$/m.test(frontMatter?.[1] || '');
+}
+
 const productNavbarItems = productNavGroups.map((group) => {
   const section = contextualProductGroups[group.label];
   const groupLink = productNavGroupLinks[group.label];
+  const labels =
+    group.label === '终端'
+      ? group.items.filter((label) => !isTerminalNavbarProductHidden(label))
+      : group.items;
 
   return {
     type: 'dropdown',
@@ -319,7 +355,7 @@ const productNavbarItems = productNavGroups.map((group) => {
     position: 'left',
     className: 'product-nav-dropdown',
     ...(groupLink ? {to: withSidebarContext(groupLink, section)} : {}),
-    items: group.items.map((label) => getProductNavbarItem(label, section)),
+    items: labels.map((label) => getProductNavbarItem(label, section)),
   };
 });
 
