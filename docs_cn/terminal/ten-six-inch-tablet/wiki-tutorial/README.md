@@ -6,6 +6,9 @@ generated_from_split_doc: terminal/ten-six-inch-tablet/wiki-tutorial
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # Wiki 教程
 
-<DocCardList />
+<AutoDocCardList />

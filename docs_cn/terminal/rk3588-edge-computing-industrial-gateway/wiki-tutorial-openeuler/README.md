@@ -6,6 +6,9 @@ generated_from_split_doc: terminal/rk3588-edge-computing-industrial-gateway/wiki
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # OpenEuler 系统 Wiki 教程
 
-<DocCardList />
+<AutoDocCardList />

@@ -6,6 +6,9 @@ generated_from_split_doc: main-board/robo3588-robot-main-board/wiki-tutorial-lin
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # Linux 系统 Wiki 教程
 
-<DocCardList />
+<AutoDocCardList />

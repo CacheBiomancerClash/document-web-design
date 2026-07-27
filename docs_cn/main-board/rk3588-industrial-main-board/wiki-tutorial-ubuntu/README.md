@@ -6,6 +6,9 @@ generated_from_split_doc: main-board/rk3588-industrial-main-board/wiki-tutorial-
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # Ubuntu 系统 Wiki 教程
 
-<DocCardList />
+<AutoDocCardList />

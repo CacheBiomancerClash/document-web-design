@@ -6,6 +6,9 @@ generated_from_split_doc: reference/bq-3588-c-wiki-tutorial
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # WiKi教程-BQ-3588-C
 
-<DocCardList />
+<AutoDocCardList />

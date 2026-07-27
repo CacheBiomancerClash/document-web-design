@@ -6,6 +6,9 @@ generated_from_split_doc: main-board/rk3506-industrial-main-board/Quick-Start-Ma
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # Buildroot系统 Wiki 教程
 
-<DocCardList />
+<AutoDocCardList />

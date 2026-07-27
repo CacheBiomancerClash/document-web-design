@@ -6,6 +6,9 @@ generated_from_split_doc: openharmony/rk3568-15-6-inch-panel/RK3568_Industrial_b
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # OpenHarmony 用户手册
 
-<DocCardList />
+<AutoDocCardList />

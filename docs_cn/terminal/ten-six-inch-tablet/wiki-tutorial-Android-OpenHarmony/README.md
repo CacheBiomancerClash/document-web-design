@@ -6,6 +6,9 @@ generated_from_split_doc: terminal/ten-six-inch-tablet/wiki-tutorial-Android-Ope
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # OpenHarmony Wiki 教程
 
-<DocCardList />
+<AutoDocCardList />

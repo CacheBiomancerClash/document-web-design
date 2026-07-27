@@ -6,6 +6,9 @@ generated_from_split_doc: openharmony/rk3576-data-acquisition-gateway/RK3576_Dat
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # OpenHarmony 用户手册
 
-<DocCardList />
+<AutoDocCardList />

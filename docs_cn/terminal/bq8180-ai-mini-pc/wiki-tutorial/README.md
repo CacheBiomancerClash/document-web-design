@@ -6,6 +6,9 @@ generated_from_split_doc: terminal/bq8180-ai-mini-pc/wiki-tutorial
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # Wiki 教程
 
-<DocCardList />
+<AutoDocCardList />

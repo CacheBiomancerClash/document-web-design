@@ -6,6 +6,9 @@ generated_from_split_doc: main-board/rk3576-industrial-control-main-board/wiki-t
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # Wiki 教程
 
-<DocCardList />
+<AutoDocCardList />

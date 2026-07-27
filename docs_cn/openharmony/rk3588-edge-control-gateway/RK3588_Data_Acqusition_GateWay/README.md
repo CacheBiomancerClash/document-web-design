@@ -6,6 +6,9 @@ generated_from_split_doc: openharmony/rk3588-edge-control-gateway/RK3588_Data_Ac
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # OpenHarmony 用户手册
 
-<DocCardList />
+<AutoDocCardList />

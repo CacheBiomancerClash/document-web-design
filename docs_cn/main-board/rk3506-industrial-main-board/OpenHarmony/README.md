@@ -6,6 +6,9 @@ generated_from_split_doc: main-board/rk3506-industrial-main-board/OpenHarmony
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # OpenHarmony 系统 Wiki 教程
 
-<DocCardList />
+<AutoDocCardList />

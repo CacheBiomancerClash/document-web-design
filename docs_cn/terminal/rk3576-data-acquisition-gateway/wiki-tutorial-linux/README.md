@@ -6,6 +6,9 @@ generated_from_split_doc: terminal/rk3576-data-acquisition-gateway/wiki-tutorial
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # Wiki 教程
 
-<DocCardList />
+<AutoDocCardList />

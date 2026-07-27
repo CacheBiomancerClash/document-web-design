@@ -247,9 +247,12 @@ function writeSplitDoc(docsRoot, splitSource) {
   }));
   const parentSource = [
     stringifyFrontMatter(parentFrontMatter),
+    '',
+    'import AutoDocCardList from \'@site/src/components/AutoDocCardList\';',
+    '',
     `# ${parentLabel}`,
     '',
-    '<DocCardList />',
+    '<AutoDocCardList />',
     '',
   ].join('\n');
 

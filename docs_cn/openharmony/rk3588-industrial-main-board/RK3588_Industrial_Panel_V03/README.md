@@ -6,6 +6,9 @@ generated_from_split_doc: openharmony/rk3588-industrial-main-board/RK3588_Indust
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # OpenHarmony 用户手册
 
-<DocCardList />
+<AutoDocCardList />

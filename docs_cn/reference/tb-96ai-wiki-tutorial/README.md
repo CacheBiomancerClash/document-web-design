@@ -6,6 +6,9 @@ generated_from_split_doc: reference/tb-96ai-wiki-tutorial
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # WiKi教程-TB-96AI
 
-<DocCardList />
+<AutoDocCardList />

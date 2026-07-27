@@ -6,6 +6,9 @@ generated_from_split_doc: terminal/rk3506-industrial-panel/buildroot
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # Buildroot 系统 Wiki 教程
 
-<DocCardList />
+<AutoDocCardList />

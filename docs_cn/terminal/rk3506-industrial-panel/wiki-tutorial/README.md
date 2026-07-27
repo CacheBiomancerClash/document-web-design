@@ -6,6 +6,9 @@ generated_from_split_doc: terminal/rk3506-industrial-panel/wiki-tutorial
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # Wiki 教程
 
-<DocCardList />
+<AutoDocCardList />

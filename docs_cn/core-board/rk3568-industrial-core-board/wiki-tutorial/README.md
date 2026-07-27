@@ -6,6 +6,9 @@ generated_from_split_doc: core-board/rk3568-industrial-core-board/wiki-tutorial
 ---
 
 
+
+import AutoDocCardList from '@site/src/components/AutoDocCardList';
+
 # Wiki 教程
 
-<DocCardList />
+<AutoDocCardList />
