@@ -312,9 +312,10 @@ const getProductNavbarItem = (label, section) =>
         href: '#',
       };
 
-function isTerminalNavbarProductHidden(label) {
+function isNavbarProductHidden(label, section) {
   const productLink = productDocLinks[label];
-  const match = productLink?.match(/^\/docs\/terminal\/([^/?#]+)/);
+  const contextualProductLink = getSectionProductLink(productLink, section);
+  const match = contextualProductLink?.match(/^\/docs\/([^/?#]+)\/([^/?#]+)/);
 
   if (!match) {
     return false;
@@ -329,7 +330,7 @@ function isTerminalNavbarProductHidden(label) {
         'current',
       )
     : path.join(__dirname, 'docs_cn');
-  const readmePath = path.join(docsRoot, 'terminal', match[1], 'README.md');
+  const readmePath = path.join(docsRoot, match[1], match[2], 'README.md');
 
   if (!fs.existsSync(readmePath)) {
     return false;
@@ -344,10 +345,9 @@ function isTerminalNavbarProductHidden(label) {
 const productNavbarItems = productNavGroups.map((group) => {
   const section = contextualProductGroups[group.label];
   const groupLink = productNavGroupLinks[group.label];
-  const labels =
-    group.label === '终端'
-      ? group.items.filter((label) => !isTerminalNavbarProductHidden(label))
-      : group.items;
+  const labels = group.items.filter(
+    (label) => !isNavbarProductHidden(label, section),
+  );
 
   return {
     type: 'dropdown',
