@@ -308,6 +308,9 @@ for (const docsRoot of docsRoots) {
     const { sourceDocId, cardItems } = writeSplitDoc(docsRoot, splitSource);
     splitSourceIds.add(sourceDocId);
     splitCardItemsBySourceId.set(sourceDocId, cardItems);
+
+    // 拆分完成后删除源码 md，生成的子页面就是最终文档，不再保留源文件
+    fs.unlinkSync(splitSource.filePath);
   }
 }
 
