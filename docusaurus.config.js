@@ -312,16 +312,8 @@ const getProductNavbarItem = (label, section) =>
         href: '#',
       };
 
-function isNavbarProductHidden(label, section) {
-  const productLink = productDocLinks[label];
-  const contextualProductLink = getSectionProductLink(productLink, section);
-  const match = contextualProductLink?.match(/^\/docs\/([^/?#]+)\/([^/?#]+)/);
-
-  if (!match) {
-    return false;
-  }
-
-  const docsRoot = isEnglishBuild()
+const getNavbarDocsRoot = () =>
+  isEnglishBuild()
     ? path.join(
         __dirname,
         'docs_en',
@@ -330,7 +322,9 @@ function isNavbarProductHidden(label, section) {
         'current',
       )
     : path.join(__dirname, 'docs_cn');
-  const readmePath = path.join(docsRoot, match[1], match[2], 'README.md');
+
+function isNavbarReadmeHidden(...pathSegments) {
+  const readmePath = path.join(getNavbarDocsRoot(), ...pathSegments, 'README.md');
 
   if (!fs.existsSync(readmePath)) {
     return false;
@@ -342,21 +336,36 @@ function isNavbarProductHidden(label, section) {
   return /^hide_from_sidebar:\s*true\s*$/m.test(frontMatter?.[1] || '');
 }
 
-const productNavbarItems = productNavGroups.map((group) => {
+function isNavbarProductHidden(label, section) {
+  const productLink = productDocLinks[label];
+  const contextualProductLink = getSectionProductLink(productLink, section);
+  const match = contextualProductLink?.match(/^\/docs\/([^/?#]+)\/([^/?#]+)/);
+
+  return match ? isNavbarReadmeHidden(match[1], match[2]) : false;
+}
+
+const productNavbarItems = productNavGroups.flatMap((group) => {
   const section = contextualProductGroups[group.label];
   const groupLink = productNavGroupLinks[group.label];
+  const navbarSection =
+    section || groupLink?.match(/^\/docs\/([^/?#]+)/)?.[1];
+
+  if (navbarSection && isNavbarReadmeHidden(navbarSection)) {
+    return [];
+  }
+
   const labels = group.items.filter(
     (label) => !isNavbarProductHidden(label, section),
   );
 
-  return {
+  return [{
     type: 'dropdown',
     label: group.label,
     position: 'left',
     className: 'product-nav-dropdown',
     ...(groupLink ? {to: withSidebarContext(groupLink, section)} : {}),
     items: labels.map((label) => getProductNavbarItem(label, section)),
-  };
+  }];
 });
 
 /** @type {import('@docusaurus/types').Config} */
