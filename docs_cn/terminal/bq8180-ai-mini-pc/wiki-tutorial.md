@@ -9,7 +9,7 @@ title: BQ8180 AI Mini PC
 
 # BQ8180 AI Mini PC
 
-### 一、快速上手
+## 一、快速上手
 
 ### 产品优势
 
@@ -263,7 +263,7 @@ sudo systemctl start ssh
 sudo systemctl enable ssh
 ```
 
-### 二、Ubuntu系统
+## 二、Ubuntu系统
 
 ### 默认用户
 
@@ -355,7 +355,7 @@ sudo mount /dev/sda SD
 (1)支持耳机播放和录音
 (2)支持SPK播放
 
-### 三、Debian12
+## 三、Debian12
 
 ### 烧录信息
 #### 烧入准备
@@ -510,7 +510,7 @@ gst-launch-1.0 v4l2src device=/dev/video2 ! queue max-size-buffers=15 ! video/x-
 (1)使用hdmi外接显示屏能够正常显示
 ![图片](bq8180-ai-mini-pc-assets/picture80.webp)
 
-### 四、Openharmony
+## 四、Openharmony
 
 ### 默认用户
 
@@ -564,7 +564,7 @@ sudo mount /dev/sda SD
 (1)支持耳机播放和录音
 (2)支持SPK播放
 
-### 五、Openeuler
+## 五、Openeuler
 
 ### 默认用户
 
@@ -645,7 +645,7 @@ sudo mount /dev/sda SD
 
 ![图片](bq8180-ai-mini-pc-assets/picture81.webp)
 
-### 六、Windows
+## 六、Windows
 
 ### 制作启动盘
 
@@ -720,7 +720,7 @@ sudo mount /dev/sda SD
 
 ![图片](bq8180-ai-mini-pc-assets/picture106.webp)
 
-### 七、硬件资料
+## 七、硬件资料
 
 ![图片](bq8180-ai-mini-pc-assets/picture69.webp)
 
@@ -736,7 +736,7 @@ sudo mount /dev/sda SD
 
 ![图片](bq8180-ai-mini-pc-assets/picture72.webp)
 
-### 八、常见问题
+## 八、常见问题
 
 ### FAQs
 
