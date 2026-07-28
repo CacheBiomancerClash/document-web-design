@@ -173,7 +173,6 @@ const productNavGroups = [
   {
     label: '终端',
     items: [
-      'Robo3588 机器人中枢',
       'AI边缘工作站',
       'RK3576 数据采集网关',
       '8英寸平板',
@@ -253,8 +252,6 @@ const productDocLinks = {
   'RK3588核心板+底板': '/docs/main-board/rk3588-main-board',
   'Robo3588机器人主板': '/docs/main-board/robo3588-robot-main-board',
   'RK3506 工业主板': '/docs/main-board/rk3506-industrial-main-board',
-  'Robo3588 机器人主板': '/docs/terminal/Robo3588-Robot-Mainboard',
-  'Robo3588 机器人中枢': '/docs/terminal/Robo3588-Robot-Mainboard',
   'AI边缘工作站': '/docs/terminal/ai-edge-workstation',
   'RK3576 数据采集网关': '/docs/terminal/rk3576-data-acquisition-gateway',
   '8英寸平板': '/docs/terminal/eight-inch-tablet',
