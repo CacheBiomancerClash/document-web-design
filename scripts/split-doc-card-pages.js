@@ -305,24 +305,43 @@ function writeGeneratedSplitCardItems(cardItemsBySourceId) {
   );
 }
 
-const splitSourceIds = new Set();
-const splitCardItemsBySourceId = new Map();
+function readGeneratedSplitSources() {
+  if (!fs.existsSync(generatedSplitSourcesPath)) {
+    return [];
+  }
+
+  return JSON.parse(fs.readFileSync(generatedSplitSourcesPath, 'utf8'));
+}
+
+function readGeneratedSplitCardItems() {
+  if (!fs.existsSync(generatedSplitCardItemsPath)) {
+    return {};
+  }
+
+  return JSON.parse(fs.readFileSync(generatedSplitCardItemsPath, 'utf8'));
+}
+
+const splitSourceIds = new Set(readGeneratedSplitSources());
+const splitCardItemsBySourceId = new Map(
+  Object.entries(readGeneratedSplitCardItems()),
+);
+let processedSplitSources = 0;
 
 for (const docsRoot of docsRoots) {
   for (const splitSource of collectSplitSources(docsRoot)) {
     const { sourceDocId, cardItems } = writeSplitDoc(docsRoot, splitSource);
     splitSourceIds.add(sourceDocId);
     splitCardItemsBySourceId.set(sourceDocId, cardItems);
+    processedSplitSources += 1;
 
     // 拆分完成后删除源码 md，生成的子页面就是最终文档
     fs.unlinkSync(splitSource.filePath);
   }
 }
 
-// 只有确实处理了拆分时，才覆写 JSON 元数据；
-// 若没有待拆分源码（例如之前已拆分完且删除了源码 md），
-// 则保留已有 JSON 文件不变，避免 CI 场景下清空元数据。
-if (splitSourceIds.size > 0) {
+// 只有确实处理了拆分时，才将本次结果合并进已有 JSON 元数据；
+// 已拆分文档的源码会被删除，因此后续增量拆分不能丢弃旧条目。
+if (processedSplitSources > 0) {
   writeGeneratedSplitSources(splitSourceIds);
   writeGeneratedSplitCardItems(splitCardItemsBySourceId);
 }
