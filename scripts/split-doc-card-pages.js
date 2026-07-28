@@ -241,11 +241,6 @@ function writeSplitDoc(docsRoot, splitSource) {
     generated_from_split_doc: sourceDocId,
     editUrl: false,
   };
-  const cardItems = sections.map((section, index) => ({
-    type: 'link',
-    label: section.title,
-    href: `${path.basename(outputDir)}/${String(index + 1).padStart(2, '0')}`,
-  }));
   const parentSource = [
     stringifyFrontMatter(parentFrontMatter),
     '',
@@ -280,7 +275,6 @@ function writeSplitDoc(docsRoot, splitSource) {
     fs.writeFileSync(path.join(outputDir, fileName), sectionSource);
   });
 
-  return { sourceDocId, cardItems };
 }
 
 function writeGeneratedSplitSources(sourceIds) {
@@ -305,43 +299,100 @@ function writeGeneratedSplitCardItems(cardItemsBySourceId) {
   );
 }
 
-function readGeneratedSplitSources() {
-  if (!fs.existsSync(generatedSplitSourcesPath)) {
-    return [];
+function collectGeneratedSplitMetadata() {
+  const sourceIds = new Set();
+  const cardItemsBySourceId = new Map();
+
+  function walk(dirPath) {
+    const markerPath = path.join(dirPath, '.split-doc-generated');
+
+    if (fs.existsSync(markerPath)) {
+      const sourceDocId = fs.readFileSync(markerPath, 'utf8').trim();
+
+      if (!sourceDocId) {
+        throw new Error(`Empty split-doc marker: ${markerPath}`);
+      }
+
+      const pages = fs
+        .readdirSync(dirPath, { withFileTypes: true })
+        .filter((entry) => {
+          if (!entry.isFile() || !isMarkdownFile(entry.name)) {
+            return false;
+          }
+
+          const pageName = path.parse(entry.name).name.toLowerCase();
+          return pageName !== 'readme' && pageName !== 'index';
+        })
+        .map((entry) => {
+          const filePath = path.join(dirPath, entry.name);
+          const source = fs.readFileSync(filePath, 'utf8');
+          const { frontMatter, body } = parseFrontMatter(source);
+          const firstH1 = body.split(/\r?\n/).find((line) => /^#\s+/.test(line));
+          const label =
+            frontMatter.sidebar_label ||
+            frontMatter.title ||
+            (firstH1
+              ? normalizeHeadingText(firstH1.replace(/^#\s+/, ''))
+              : path.parse(entry.name).name);
+          const parsedPosition = Number(frontMatter.sidebar_position);
+
+          return {
+            fileName: entry.name,
+            sidebarPosition: Number.isFinite(parsedPosition)
+              ? parsedPosition
+              : Number.POSITIVE_INFINITY,
+            cardItem: {
+              type: 'link',
+              label: String(label),
+              href: `${path.basename(dirPath)}/${path.parse(entry.name).name}`,
+            },
+          };
+        })
+        .sort((left, right) => {
+          if (left.sidebarPosition !== right.sidebarPosition) {
+            return left.sidebarPosition - right.sidebarPosition;
+          }
+
+          return left.fileName.localeCompare(right.fileName, undefined, {
+            numeric: true,
+          });
+        });
+
+      sourceIds.add(sourceDocId);
+      cardItemsBySourceId.set(
+        sourceDocId,
+        pages.map((page) => page.cardItem),
+      );
+      return;
+    }
+
+    for (const entry of fs.readdirSync(dirPath, { withFileTypes: true })) {
+      if (!entry.isDirectory() || entry.name.startsWith('.')) {
+        continue;
+      }
+
+      walk(path.join(dirPath, entry.name));
+    }
   }
 
-  return JSON.parse(fs.readFileSync(generatedSplitSourcesPath, 'utf8'));
-}
-
-function readGeneratedSplitCardItems() {
-  if (!fs.existsSync(generatedSplitCardItemsPath)) {
-    return {};
+  for (const docsRoot of docsRoots) {
+    walk(docsRoot);
   }
 
-  return JSON.parse(fs.readFileSync(generatedSplitCardItemsPath, 'utf8'));
+  return { sourceIds, cardItemsBySourceId };
 }
-
-const splitSourceIds = new Set(readGeneratedSplitSources());
-const splitCardItemsBySourceId = new Map(
-  Object.entries(readGeneratedSplitCardItems()),
-);
-let processedSplitSources = 0;
 
 for (const docsRoot of docsRoots) {
   for (const splitSource of collectSplitSources(docsRoot)) {
-    const { sourceDocId, cardItems } = writeSplitDoc(docsRoot, splitSource);
-    splitSourceIds.add(sourceDocId);
-    splitCardItemsBySourceId.set(sourceDocId, cardItems);
-    processedSplitSources += 1;
+    writeSplitDoc(docsRoot, splitSource);
 
     // 拆分完成后删除源码 md，生成的子页面就是最终文档
     fs.unlinkSync(splitSource.filePath);
   }
 }
 
-// 只有确实处理了拆分时，才将本次结果合并进已有 JSON 元数据；
-// 已拆分文档的源码会被删除，因此后续增量拆分不能丢弃旧条目。
-if (processedSplitSources > 0) {
-  writeGeneratedSplitSources(splitSourceIds);
-  writeGeneratedSplitCardItems(splitCardItemsBySourceId);
-}
+// 每次都以带标记的拆分页目录为准重建元数据。
+// 因此直接新增、删除或修改 01.md、02.md 等页面时无需手工维护 JSON。
+const { sourceIds, cardItemsBySourceId } = collectGeneratedSplitMetadata();
+writeGeneratedSplitSources(sourceIds);
+writeGeneratedSplitCardItems(cardItemsBySourceId);
