@@ -754,6 +754,28 @@
       "href": "wiki-tutorial-openeuler/04"
     }
   ],
+  "terminal/Robo3588-Robot-Mainboard/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "1. 硬件清单",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "2. PC环境配置",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "3. 固件烧录",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "4. 基础功能验证",
+      "href": "wiki-tutorial/04"
+    }
+  ],
   "terminal/ten-six-inch-tablet/wiki-tutorial": [
     {
       "type": "link",
